@@ -1,0 +1,48 @@
+The test suite uses abiword from the command line to convert from abw
+format to odt format and inspect the result using Relax NG. Some tests
+convert from odt back to abw again to see that the result of this
+double conversion is what is expected. Both a relaxng validator and 
+Perl Test::Class are needed for the test suite. 
+# yum install perl-Test-Class
+
+Some tools which are either used by the suite or are handy to know about
+ar ethe jing / trang couple:
+http://code.google.com/p/jing-trang/downloads/list
+
+To get around path and installation issues, the tools expect trang and jing
+to work as though the following borne script snippit is effectual:
+alias trang="java -jar /usr/local/java/trang/trang.jar"
+alias jing="java -jar /usr/local/java/jing/bin/jing.jar"
+
+and libxml2's support for relax ng. As libxml2 only supports the xml
+serialization of relax, you need to use a schema conversion tool in
+order to validate schemas that use the compact syntax. Of course,
+libxml2 might have gianed support for the compact rnc format by the
+time you read this.
+
+---------------
+
+Note that the testing normally involves loading an abw file,
+converting it to odt, then loading that odt and converting back to
+abw, and perhaps converting the second abw to odt yet again. This is
+because the coding involves both saving to and loading from odt files.
+So the two round trips are required to ensure that nothing is lost
+during the save/load process. A simple test here is to run a schmea
+validation on the first and second odt file to make sure that the
+first odt has the desired form and that nothing is lost during the
+loading of the odt file again.
+
+Luckily this can be automated using the abiword binary and jing to
+verify the structure and content of the odf/content.xml file. Each
+directory contains abw files, rnc (Relax NG Compact) schema files and
+perl Text::Class code to use the former files and make sure the
+abiword binary acts as expected during odt processing (load/save).
+
+The perl code can be run by stepping into the directory and executing
+the .t file from there. Temporary files will be placed into /tmp/`id
+-u` and might remain there. You will receive an overview of which
+tests have run and which if any have failed (and why).
+
+$ cd para-add-delete
+$ ./para_and_delete::Test.t
+
