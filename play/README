@@ -1,0 +1,8 @@
+is-using-m_vecInlineFmt-ok.abw
+
+ This is checking if hijacking the m_vecInlineFmt variable in 
+ ODi_TextContent_ListenerState::startElement() et al is ok. It seems to be fine
+ because if a revision ends after an XML element we are going to get delta: elements
+ showing the bold/italic changes anyway, so it doesn't matter that the formatting
+ stack is reused here, we can pick up the closing of formatting via change records.
+ Though the law of uncertainty would make it simpler to have a separate stack for revision stuff.
