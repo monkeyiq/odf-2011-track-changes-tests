@@ -25,25 +25,42 @@ namespace delta="http://www.deltaxml.com/ns/track-changes/delta-namespace"
 namespace ac="http://www.deltaxml.com/ns/track-changes/attribute-change-namespace" 
 namespace split="http://www.deltaxml.com/ns/track-changes/split-namespace"
 
-start = root
+include "../common.rnc"
 
-anything         = ( element* { anything } | attribute * { text } | text )*
-anythingNotDelta = ( element* { anything } | attribute * - (delta:*) { text } | text )*
-
-
-
-root = 
-   element document-content {
-      (attribute * { text })*,
-      element * - (delta:*) { anything }+,
-      tracked-changes, 
-      body
+tracked-changes =
+   element delta:tracked-changes {
+      attribute delta:showing-revisions {text}?,
+      attribute delta:mark-revisions {text}?,
+      attribute delta:current-revision {text}?,
+      attribute delta:auto-revisioning {text}?,
+      element delta:change-transaction {
+         attribute delta:change-id { text },
+         element delta:change-info {
+            element dc:creator { text } &
+            element dc:date { text } &
+            element delta:xvers { text } &
+            element delta:change-log { text }
+         },
+         element * { anything }*
+      }+
    }
 
-body =
-   element body {
-      element text {
-         sectioncore
+sectioncore = 
+   element text:section {
+      attribute * {text}*,
+      element text:p { 
+         text,
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"},
+         attribute split:split01 {"split0"},
+         ( attribute text:* { text } )*
+      },
+      element text:p {
+         "In revision 2, this second sentence was then modified by hitting return before it to turn it into the second paragraph.",
+         attribute delta:insertion-type {"split"}, 
+         attribute delta:insertion-change-idref{"1"},
+         attribute delta:split-id {"split0"},
+         ( attribute * - (delta:*) { text } )*
       }
+
    }
-   

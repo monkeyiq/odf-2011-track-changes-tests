@@ -39,9 +39,10 @@ perl Text::Class code to use the former files and make sure the
 abiword binary acts as expected during odt processing (load/save).
 
 The perl code can be run by stepping into the directory and executing
-the .t file from there. Temporary files will be placed into /tmp/`id
--u` and might remain there. You will receive an overview of which
-tests have run and which if any have failed (and why).
+the .t file from there. Temporary files will be placed into the
+/tmp/`id -u` directory and might remain there. You will receive an
+overview of which tests have run and which if any have failed (and
+why).
 
 $ cd para-add-delete
 $ ./para_and_delete::Test.t

@@ -28,42 +28,42 @@ namespace split="http://www.deltaxml.com/ns/track-changes/split-namespace"
 include "../common.rnc"
 
 tracked-changes =
-element delta:tracked-changes {
-	attribute delta:showing-revisions {text}?,
-	attribute delta:mark-revisions {text}?,
-	attribute delta:current-revision {text}?,
-	attribute delta:auto-revisioning {text}?,
-	element delta:change-transaction {
-		attribute delta:change-id { text },
-		element delta:change-info {
-		       element dc:creator { text } &
-		       element dc:date { text } &
-       		       element delta:xvers { text } &
-       		       element delta:change-log { text }
-		},
-		element * { anything }*
-	}+
-}
+   element delta:tracked-changes {
+      attribute delta:showing-revisions {text}?,
+      attribute delta:mark-revisions {text}?,
+      attribute delta:current-revision {text}?,
+      attribute delta:auto-revisioning {text}?,
+      element delta:change-transaction {
+         attribute delta:change-id { text },
+         element delta:change-info {
+            element dc:creator { text } &
+            element dc:date { text } &
+            element delta:xvers { text } &
+            element delta:change-log { text }
+         },
+         element * { anything }*
+      }+
+   }
 
 sectioncore = 
-element text:section {
-	attribute * {text}*,
-	element text:p { 
-		text,
-		attribute delta:insertion-type {"insert-with-content"}, 
-		attribute delta:insertion-change-idref{"1"},
-		( attribute * - (delta:*) { text } )*
-	},
-	element text:p {
-		"Inserted paragraph here!",
-		attribute delta:insertion-type {"insert-with-content"}, 
-		attribute delta:insertion-change-idref{"2"},
-		( attribute * - (delta:*) { text } )*
-	},
-	element text:p {
-		text,
-		attribute delta:insertion-type {"insert-with-content"}, 
-		attribute delta:insertion-change-idref{"1"},
-		( attribute * - (delta:*) { text } )*
-	}
-}
+   element text:section {
+      attribute * {text}*,
+      element text:p { 
+         text,
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"},
+         ( attribute * - (delta:*) { text } )*
+      },
+      element text:p {
+         "Inserted paragraph here!",
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"2"},
+         ( attribute * - (delta:*) { text } )*
+      },
+      element text:p {
+         text,
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"},
+         ( attribute * - (delta:*) { text } )*
+      }
+   }
