@@ -61,6 +61,13 @@ sectioncore =
          attribute delta:insertion-change-idref{"1"},
          attribute delta:split-id {"split0"},
          ( attribute * - (delta:*) { text } )*
+      },
+      element delta:inserted-text-start {
+         attribute delta:inserted-text-id {"1"}
+      },
+      element delta:inserted-text-end {
+         attribute delta:inserted-text-idref {"1"}
       }
-
    }
+
+
