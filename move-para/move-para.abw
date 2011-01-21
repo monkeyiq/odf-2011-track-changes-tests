@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="11" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Ben Martin</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="2" edit-time="31" last-saved="1295413515" uid="db5ef234-2385-11e0-8ada-ca93963917b2">
+<version id="1" started="1295411875" uid="e202e19a-2385-11e0-8ada-ca93963917b2" auto="0" top-xid="10"/>
+<version id="2" started="1295413515" uid="b3939ae4-2389-11e0-9d6a-c9502dc3a6f0" auto="0" top-xid="11"/>
+</history>
+<revisions show="1" mark="1" show-level="0" auto="0">
+<r id="1" time-started="1295411865" version="0" author="Ben Martin" >a</r>
+<r id="2" time-started="1295413499" version="0" author="Ben Martin" >b</r>
+</revisions>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
+<s type="C" name="Reference" props="font-size:10pt"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="8.267717" height="11.692913" units="in" page-scale="1.000000"/>
+<section xid="9" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" ct:split-id="split0" xid="10"><c revision="1">p1</c><c revision="1"></c></p>
+<p ct:split-id-ref="split0" ct:split-id="split1" revision="1" style="Normal" xid="1"><c revision="1">p2</c><c revision="1"></c></p>
+<p baz="u2" delta:move-id="mv2" ct:split-id-ref="split1" ct:split-id="split2" revision="1" style="Normal" xid="2"><c revision="1,-2">p3</c><c revision="1"></c></p>
+<p ct:split-id-ref="split2" ct:split-id="split3" revision="1,-2" style="Normal" xid="3"><c revision="1">p4</c><c revision="1"></c></p>
+<p ct:split-id-ref="split3" ct:split-id="split4" revision="1" style="Normal" xid="4"><c revision="1">p5</c><c revision="1"></c></p>
+<p delta:move-idref="mv2" ct:split-id-ref="split4" ct:split-id="split5" revision="1" style="Normal" xid="5" props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal"><c revision="2{font-family:Times New Roman;text-decoration:none;color:000000;font-size:12pt;text-position:normal;font-weight:normal;font-style:normal;lang:en-AU}{}">p3</c></p>
+<p ct:split-id="split5" ct:split-id-ref="split4" style="Normal" revision="1{font-weight:normal; font-style:normal; text-decoration:none; text-position:normal; font-size:12pt; font-family:Times New Roman; lang:en-AU}" delta:move-idref="mv2" xid="11"><c revision="1"></c><c revision="1">p6</c><c revision="1"></c></p>
+<p ct:split-id-ref="split5" ct:split-id="split6" revision="1" style="Normal" xid="6"><c revision="1">p7</c><c revision="1"></c></p>
+<p ct:split-id-ref="split6" ct:split-id="split7" revision="1" style="Normal" xid="7"><c revision="1">p8</c><c revision="1"></c></p>
+<p ct:split-id-ref="split7" ct:split-id="0" revision="1" style="Normal" xid="8"><c revision="1"></c></p>
+</section>
+</abiword>
