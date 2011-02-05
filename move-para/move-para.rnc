@@ -127,6 +127,13 @@ sectioncore =
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
       },
+      element delta:remove-leaving-content-start {
+         attribute delta:removal-change-idref {"0"},
+         attribute delta:end-element-idref {"ee1"},
+         element text:p {
+            attribute text:style-name {"Normal"}
+         }
+      }?,
       element text:p { 
          attribute split:split01 {"split5"},
          attribute delta:split-id {"split4"},
@@ -144,6 +151,9 @@ sectioncore =
             attribute delta:inserted-text-idref {text} #{"ctid-2"}
          }
       },
+      element delta:remove-leaving-content-end {
+         attribute delta:end-element-id {"ee1"}
+      }?,
       element text:p { 
          "p6",
          attribute split:split01 {"split5"},
