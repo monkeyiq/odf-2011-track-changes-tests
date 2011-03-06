@@ -1,0 +1,110 @@
+default namespace = "urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+namespace style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" 
+namespace text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" 
+namespace table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" 
+namespace draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" 
+namespace fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" 
+namespace xlink="http://www.w3.org/1999/xlink" 
+namespace dc="http://purl.org/dc/elements/1.1/" 
+namespace meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" 
+namespace number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" 
+namespace svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" 
+namespace chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" 
+namespace dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" 
+namespace math="http://www.w3.org/1998/Math/MathML" 
+namespace form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" 
+namespace script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" 
+namespace ooo="http://openoffice.org/2004/office" 
+namespace ooow="http://openoffice.org/2004/writer" 
+namespace oooc="http://openoffice.org/2004/calc" 
+namespace dom="http://www.w3.org/2001/xml-events" 
+namespace xforms="http://www.w3.org/2002/xforms" 
+namespace xsd="http://www.w3.org/2001/XMLSchema" 
+namespace xsi="http://www.w3.org/2001/XMLSchema-instance" 
+namespace delta="http://www.deltaxml.com/ns/track-changes/delta-namespace" 
+namespace ac="http://www.deltaxml.com/ns/track-changes/attribute-change-namespace" 
+namespace split="http://www.deltaxml.com/ns/track-changes/split-namespace"
+
+include "../common.rnc"
+
+tracked-changes =
+   element delta:tracked-changes {
+      attribute delta:showing-revisions {text}?,
+      attribute delta:mark-revisions {text}?,
+      attribute delta:current-revision {text}?,
+      attribute delta:auto-revisioning {text}?,
+      element delta:change-transaction {
+         attribute delta:change-id { text },
+         element delta:change-info {
+            element dc:creator { text } &
+            element dc:date { text } &
+            element delta:xvers { text } &
+            element delta:change-log { text }
+         },
+         element * { anything }*
+      }+
+   }
+
+sectioncore = 
+   element text:section {
+      attribute * {text}*,
+      element text:p { 
+         ( attribute text:* { text } )*,
+         attribute split:split01 {"split0"},
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"},
+         text,
+         # "one",
+         element delta:removed-content {
+            attribute RR {text}?,
+            attribute delta:removed-text-id {"ctid-1"},
+            attribute delta:removal-change-idref {"2"},
+            "two"
+         },
+         text
+#         " three"
+      },
+
+      element text:p { 
+         ( attribute text:* { text } )* ,
+         attribute split:split01 {"split1"} ,
+         attribute delta:split-id {"split0"} ,
+         attribute delta:insertion-type {"split"} , 
+         attribute delta:insertion-change-idref{"1"} ,
+         text, 
+         #"four",
+         element delta:removed-content {
+            attribute RR {text}?,
+            attribute delta:removed-text-id {"ctid-2"} ,
+            attribute delta:removal-change-idref {"2"} ,
+            "five"
+         },
+         text?
+      },
+
+      element text:p { 
+         ( attribute text:* { text } )*,
+         attribute split:split01 {"split2"},
+         attribute delta:split-id {"split1"},
+         attribute delta:insertion-type {"split"}, 
+         attribute delta:insertion-change-idref{"1"},
+         "some text"
+      },
+
+
+      element text:p { 
+         ( attribute text:* { text } )*,
+         attribute delta:split-id {"split2"},
+         attribute delta:insertion-type {"split"}, 
+         attribute delta:insertion-change-idref{"1"},
+         text, 
+         #"the last para... ",
+         element delta:removed-content {
+            attribute RR {text}?,
+            attribute delta:removed-text-id {"ctid-3"},
+            attribute delta:removal-change-idref {"2"},
+            "and del me"
+         }
+      }
+
+   }
