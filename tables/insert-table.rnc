@@ -49,7 +49,8 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
-         "paragraph one",
+         "This is the first para",
+         attribute split:split01 {"split0"},
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
@@ -64,48 +65,11 @@ sectioncore =
          element table:table-row {
             element table:table-cell {
                attribute table:style-name { text },
-
                element text:p { 
                   ( attribute text:* { text } )*,
                   attribute delta:insertion-type {"insert-with-content"}, 
                   attribute delta:insertion-change-idref{"1"},
-                  text,
-                  # "cell1",
-                  element delta:inserted-text-start  
-                  {
-                     attribute delta:inserted-text-id {"ctid-1"},
-                     attribute delta:insertion-change-idref {"2"}
-                  },
-                  text,
-                  #"more trailing",
-                  element delta:inserted-text-end {
-                     attribute delta:inserted-text-idref {"ctid-1"}
-                  }
-               }
-            },
-            element table:table-cell {
-               attribute table:style-name { text },
-               element delta:removed-content {
-                  attribute RR {text}?,
-                  attribute delta:removal-change-idref {"2"},
-                  element text:p { 
-                     ( attribute text:* { text } )*,
-                     attribute delta:insertion-type {"insert-with-content"}, 
-                     attribute delta:insertion-change-idref{"1"},
-                     ( "c2"
-                        |
-                        (
-                           element delta:inserted-text-start {
-                              attribute delta:inserted-text-id {"1"}
-                           },
-                           text,
-                           # "c2",
-                           element delta:inserted-text-end {
-                              attribute delta:inserted-text-idref {"1"}
-                           }
-                        )
-                     )
-                  }
+                  "Three columns, 2 rows"
                }
             },
             element table:table-cell {
@@ -113,19 +77,15 @@ sectioncore =
                element text:p { 
                   ( attribute text:* { text } )*,
                   attribute delta:insertion-type {"insert-with-content"}, 
-                  attribute delta:insertion-change-idref{"1"},
-                  element delta:inserted-text-start  
-                  {
-                     attribute delta:inserted-text-id {"ctid-2"},
-                     attribute delta:insertion-change-idref {"2"}
-                  },
-                  text,
-                  #"leading content ",
-                  element delta:inserted-text-end {
-                     attribute delta:inserted-text-idref {"ctid-2"}
-                  },
-                  text
-                  # "c3"
+                  attribute delta:insertion-change-idref{"1"}
+               }
+            },
+            element table:table-cell {
+               attribute table:style-name { text },
+               element text:p { 
+                  ( attribute text:* { text } )*,
+                  attribute delta:insertion-type {"insert-with-content"}, 
+                  attribute delta:insertion-change-idref{"1"}
                }
             }
          },
@@ -145,23 +105,9 @@ sectioncore =
                   ( attribute text:* { text } )*,
                   attribute delta:insertion-type {"insert-with-content"}, 
                   attribute delta:insertion-change-idref{"1"},
-                  text,
-                  #"middle ",
-                  element delta:inserted-text-start  
-                  {
-                     attribute delta:inserted-text-id {"ctid-3"},
-                     attribute delta:insertion-change-idref {"2"}
-                  },
-                  text,
-                  #"extra text ",
-                  element delta:inserted-text-end {
-                     attribute delta:inserted-text-idref {"ctid-3"}
-                  },
-                  text
-                  # "bottom cell"
+                  text?
                }
             },
-
             element table:table-cell {
                attribute table:style-name { text },
                element text:p { 
@@ -174,18 +120,10 @@ sectioncore =
          }
       },
       element text:p { 
-         "para two",
-         attribute split:split01 {"split0"},
-         attribute delta:insertion-type {"insert-with-content"}, 
-         attribute delta:insertion-change-idref{"1"},
-         ( attribute text:* { text } )*
-      },
-      element text:p { 
-         "last para.",
+         "This is the second and last",
          attribute delta:split-id {"split0"},
          attribute delta:insertion-type {"split"}, 
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
       }
    }
-

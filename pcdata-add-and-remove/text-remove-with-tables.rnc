@@ -50,6 +50,8 @@ sectioncore =
       attribute * {text}*,
       element table:table {
          attribute table:name {"Table1"},
+         attribute delta:insertion-type {"insert-with-content"},
+         attribute delta:insertion-change-idref {"1"},
          element table:table-column { text },
          element table:table-column { text },
          element table:table-row {
@@ -96,6 +98,7 @@ sectioncore =
                   text,
                   # "And this was the last ",
                   element delta:removed-content {
+                     attribute RR {text}?,
                      attribute delta:removed-text-id {"ctid-2"},
                      attribute delta:removal-change-idref {"2"},
                      "bit "
@@ -133,7 +136,9 @@ sectioncore =
       },
       element text:p { 
          text,
-         ( attribute text:* { text } )*
+         ( attribute text:* { text } )*,
+         attribute delta:insertion-type { text }?,
+         attribute delta:insertion-change-idref { text }?
       }
    }
 

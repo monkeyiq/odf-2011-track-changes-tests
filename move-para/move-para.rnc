@@ -64,6 +64,7 @@ sectioncore =
          ( attribute text:* { text } )*
       },
       element delta:removed-content {
+         attribute RR {text}?,
          attribute delta:removal-change-idref {"2"},
          attribute delta:move-id {"mv2"},
          # para contents can be slightly differently formed the second time.
@@ -90,35 +91,16 @@ sectioncore =
             }
          )
       },
+
       element text:p { 
+         ( attribute text:* { text } )*,
          attribute split:split01 {"split3"},
          attribute delta:split-id {"split2"},
          attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"2"},
-         ( attribute text:* { text } )*,
-         element delta:inserted-text-start {
-            attribute delta:inserted-text-id {"1"}
-         },
-         text,
-#         "p4",
-         ###########
-         # on second odt write only
-         (
-            element delta:inserted-text-start {
-               attribute delta:inserted-text-id {"ctid-1"},
-               attribute delta:insertion-change-idref {"2"}
-            },
-            text,
-            element delta:inserted-text-end {
-               attribute delta:inserted-text-idref {"ctid-1"}
-            }
-         )?,
-         ###########
-
-         element delta:inserted-text-end {
-            attribute delta:inserted-text-idref {"1"}
-         }
+         attribute delta:insertion-change-idref{"1"},
+         text
       },
+
       element text:p { 
          "p5",
          attribute split:split01 {"split4"},
@@ -128,7 +110,7 @@ sectioncore =
          ( attribute text:* { text } )*
       },
       element delta:remove-leaving-content-start {
-         attribute delta:removal-change-idref {"0"},
+         attribute delta:removal-change-idref {"1"},
          attribute delta:end-element-idref {"ee1"},
          element text:p {
             attribute text:style-name {"Normal"}

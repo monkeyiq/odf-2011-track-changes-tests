@@ -54,6 +54,7 @@ sectioncore =
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*,
          element delta:removed-content {
+            attribute RR {text}?,
             attribute delta:removed-text-id {"ctid-1"},
             attribute delta:removal-change-idref {"2"},
             "deleted or "

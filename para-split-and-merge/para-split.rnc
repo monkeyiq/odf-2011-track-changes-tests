@@ -49,24 +49,31 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
+         ( attribute text:* { text } )*,
          text,
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref{"1"},
-         attribute split:split01 {"split0"},
-         ( attribute text:* { text } )*
+         attribute split:split01 {"split0"}
       },
       element text:p {
-         "In revision 2, this second sentence was then modified by hitting return before it to turn it into the second paragraph.",
+         ( attribute * - (delta:*) { text } )*,
          attribute delta:insertion-type {"split"}, 
          attribute delta:insertion-change-idref{"1"},
          attribute delta:split-id {"split0"},
-         ( attribute * - (delta:*) { text } )*
-      },
-      element delta:inserted-text-start {
-         attribute delta:inserted-text-id {"1"}
-      },
-      element delta:inserted-text-end {
-         attribute delta:inserted-text-idref {"1"}
+         (
+            "In revision 2, this second sentence was then modified by hitting return before it to turn it into the second paragraph."
+            |
+            (
+               element delta:inserted-text-start {
+                  attribute delta:inserted-text-id {"1"}
+               },
+               text,
+               # "In revision 2, this second sentence was then modified by hitting return before it to turn it into the second paragraph.",
+               element delta:inserted-text-end {
+                  attribute delta:inserted-text-idref {"1"}
+               }
+            )
+         )
       }
    }
 

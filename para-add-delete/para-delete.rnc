@@ -46,31 +46,39 @@ element delta:tracked-changes {
 }
 
 sectioncore = 
-element text:section {
-	attribute * {text}*,
-	element text:p { 
-		text,
-		attribute delta:insertion-type {"insert-with-content"}, 
-		attribute delta:insertion-change-idref{"1"},
-		( attribute * - (delta:*) { text } )*
-	},
-	element text:p {
-		attribute delta:insertion-type {"insert-with-content"}, 
-		attribute delta:insertion-change-idref{"2"},
-		( attribute * - (delta:*) { text } )*,
-		element delta:removed-content-start {
-			attribute delta:removed-text-id { "ctid-1" },
-			attribute delta:removal-change-idref { "3" }
-		},
-		text,
-		element delta:removed-content-end {
-			attribute delta:removed-text-idref { "ctid-1" }
-		}
-	},
-	element text:p {
-		text,
-		attribute delta:insertion-type {"insert-with-content"}, 
-		attribute delta:insertion-change-idref{"1"},
-		( attribute * - (delta:*) { text } )*
-	}
-}
+   element text:section {
+      attribute * {text}*,
+      element text:p { 
+         text,
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"},
+         ( attribute * - (delta:*) { text } )*
+      },
+      element delta:removed-content {
+         attribute RR {text}?,
+         attribute delta:removal-change-idref {"3"},
+         element text:p {
+            ( attribute * - (delta:*) { text } )*,
+            attribute delta:insertion-type {"insert-with-content"}, 
+            attribute delta:insertion-change-idref{"2"},
+            ( "Inserted paragraph here!"
+               | 
+               ( 
+                  element delta:inserted-text-start {
+                     attribute delta:inserted-text-id { "2" }
+                  },
+                  text,
+                  element delta:inserted-text-end {
+                     attribute delta:inserted-text-idref { "2" }
+                  }
+               )
+            )
+         }
+      },
+      element text:p {
+         text,
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"},
+         ( attribute * - (delta:*) { text } )*
+      }
+   }

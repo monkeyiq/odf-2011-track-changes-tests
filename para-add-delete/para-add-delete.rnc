@@ -24,6 +24,7 @@ namespace xsi="http://www.w3.org/2001/XMLSchema-instance"
 namespace delta="http://www.deltaxml.com/ns/track-changes/delta-namespace" 
 namespace ac="http://www.deltaxml.com/ns/track-changes/attribute-change-namespace" 
 namespace split="http://www.deltaxml.com/ns/track-changes/split-namespace"
+namespace office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
 
 start = root
 
@@ -57,21 +58,31 @@ element delta:tracked-changes {
 }
 
 body =
-element body {
-	element text {
-		element text:section {
-			attribute * {text}*,
-			element * - (delta:*) { anything }+,
-			element delta:removed-content {
-				attribute delta:removal-change-idref { "3" },
-				element text:p {
-					attribute delta:insertion-change-idref { "1" },
-					attribute delta:insertion-type { "insert-with-content" },
-					(attribute * - (delta:*) { text })*,
-					text
-				}
- 			},
-			element * { anything }*
-		}
-	}
-}
+   element body {
+      element office:text {
+         element text:section {
+            attribute * {text}*,
+            attribute text:p {
+               attribute text:style-name {text},
+               attribute delta:insertion-type {"insert-with-content"},
+               attribute delta:insertion-change-idref {"1"},
+               "This is the text from the start."
+            },
+            element delta:removed-content {
+               attribute delta:removal-change-idref {"3"},
+               element text:p {
+                  attribute table:style-name { text },
+                  attribute delta:insertion-type {"insert-with-content"},
+                  attribute delta:insertion-change-idref {"2"},
+                  "Inserted paragraph here!"
+               }
+            },
+            attribute text:p {
+               attribute text:style-name {text},
+               attribute delta:insertion-type {"insert-with-content"},
+               attribute delta:insertion-change-idref {"1"},
+               "And something more."
+            }
+         }
+      }
+   }

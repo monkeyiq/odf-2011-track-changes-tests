@@ -76,7 +76,14 @@ sectioncore =
                }
             }
          },
-         text
+         element delta:inserted-text-start {
+            attribute delta:inserted-text-id {"1"} 
+         },
+         text,
+         # "three",
+         element delta:inserted-text-end {
+            attribute delta:inserted-text-idref {"1"}
+         }
       },
       element text:p { 
          "four",
@@ -87,42 +94,65 @@ sectioncore =
          ( attribute text:* { text } )*
       },
       element text:p { 
+         ( attribute text:* { text } )*,
          text,
+         # "fiv",
          attribute delta:insertion-type {"split"}, 
          attribute delta:insertion-change-idref{"1"},
          attribute delta:split-id {"split3"}, 
          attribute split:split01 {"split4"},
-         ( attribute text:* { text } )*,
-         element delta:removed-content {
-            "e",
-            attribute delta:removed-text-id {"ctid-1"},
-            attribute delta:removal-change-idref {"2"}
-         }
-      },
-      element text:p { 
-         attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"1"},
-         attribute delta:split-id {"split4"}, 
-         attribute split:split01 {"split5"},
-         ( attribute text:* { text } )*,
-         element delta:removed-content {
-            "six",
-            attribute delta:removed-text-id {"ctid-2"},
-            attribute delta:removal-change-idref {"2"}
-         }
-      },
-      element text:p { 
-         attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"1"},
-         attribute delta:split-id {"split5"}, 
-         attribute split:split01 {"split6"},
-         ( attribute text:* { text } )*,
-         element delta:removed-content {
-            "se",
-            attribute delta:removed-text-id {"ctid-3"},
-            attribute delta:removal-change-idref {"2"}
+         element delta:merge {
+            attribute delta:removal-change-idref {"2"},
+            element delta:leading-partial-content {
+               "e"
+            },
+            element delta:intermediate-content {
+               element delta:removed-content {
+                  attribute RR {text}?,
+                  attribute delta:removal-change-idref {"2"},
+                  element text:p {
+                     ( attribute text:* { text } )*,
+                     attribute delta:insertion-type {"insert-with-content"},
+                     attribute delta:insertion-change-idref {"1"},
+                     "six"
+                  }
+               } #/delta:removed-content
+            }, #/delta:intermediate-content
+            element delta:trailing-partial-content {
+               element text:p {
+                  ( attribute text:* { text } )*,
+                  attribute split:split01 {"split6"},
+                  attribute delta:split-id {"split5"},
+                  attribute delta:insertion-type {"split"},
+                  attribute delta:insertion-change-idref {"1"},
+                  element delta:inserted-text-start {
+                     attribute delta:inserted-text-id {"1"}
+                  },
+                  element delta:removed-content {
+                     attribute RR {text}?,
+                     ( attribute delta:removed-text-id {"ctid-1"}
+                        | attribute delta:removed-text-id {"ctid-2"} ),
+                     attribute delta:removal-change-idref {"2"},
+                     "se"
+                  },
+                  element delta:inserted-text-end {
+                     attribute delta:inserted-text-idref {"1"}
+                  }
+               }  #/text:p
+            }     #/delta:trailing-partial-content
+         },       #/delta:merge
+
+         element delta:inserted-text-start {
+            ( attribute delta:inserted-text-id {"ctid-2"}
+               | attribute delta:inserted-text-id {"ctid-3"} ),
+            attribute delta:insertion-change-idref {"1"}
          },
-         text
+         text,
+         #"ven",
+         element delta:inserted-text-end {
+            ( attribute delta:inserted-text-idref {"ctid-2"}
+               | attribute delta:inserted-text-idref {"ctid-3"} )
+         }
       },
       element text:p { 
          "and so on.",

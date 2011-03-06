@@ -50,7 +50,7 @@ sectioncore =
       attribute * {text}*,
 
       element delta:remove-leaving-content-start {
-         attribute delta:removal-change-idref {"0"},
+         attribute delta:removal-change-idref {"1"},
          attribute delta:end-element-idref {"ee1"},
          element text:p { attribute text:style-name {"Normal"} }
       },
@@ -62,6 +62,7 @@ sectioncore =
       },
 
       element text:p { 
+         attribute RR {text}?,
          attribute text:style-name {"Normal"},
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref {"5"},

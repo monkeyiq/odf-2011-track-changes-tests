@@ -32,7 +32,7 @@
 <p style="Normal" ct:split-id="split0" xid="10"><c revision="1">p1</c><c revision="1"></c></p>
 <p ct:split-id-ref="split0" ct:split-id="split1" revision="1" style="Normal" xid="1"><c revision="1">p2</c><c revision="1"></c></p>
 <p baz="u2" delta:move-id="mv2" ct:split-id-ref="split1" ct:split-id="split2" revision="1" style="Normal" xid="2"><c revision="1,-2">p3</c><c revision="1"></c></p>
-<p ct:split-id-ref="split2" ct:split-id="split3" revision="1,-2" style="Normal" xid="3"><c revision="1">p4</c><c revision="1"></c></p>
+<p ct:split-id-ref="split2" ct:split-id="split3" revision="1" style="Normal" xid="3"><c revision="1">p4</c><c revision="1"></c></p>
 <p ct:split-id-ref="split3" ct:split-id="split4" revision="1" style="Normal" xid="4"><c revision="1">p5</c><c revision="1"></c></p>
 <p delta:move-idref="mv2" ct:split-id-ref="split4" ct:split-id="split5" revision="1" style="Normal" xid="5" props="font-family:Times New Roman; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal"><c revision="2{font-family:Times New Roman;text-decoration:none;color:000000;font-size:12pt;text-position:normal;font-weight:normal;font-style:normal;lang:en-AU}{}">p3</c></p>
 <p ct:split-id="split5" ct:split-id-ref="split4" style="Normal" revision="1{font-weight:normal; font-style:normal; text-decoration:none; text-position:normal; font-size:12pt; font-family:Times New Roman; lang:en-AU}" delta:move-idref="mv2" xid="11"><c revision="1"></c><c revision="1">p6</c><c revision="1"></c></p>
