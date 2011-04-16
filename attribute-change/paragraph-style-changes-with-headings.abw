@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="3" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Ben Martin</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="2" edit-time="181" last-saved="1301625129" uid="bd94728c-5c07-11e0-8268-9143a0e16673">
+<version id="1" started="1301625035" uid="0656d06e-5c08-11e0-8268-9143a0e16673" auto="0" top-xid="3"/>
+<version id="2" started="1301625129" uid="3e210be0-5c08-11e0-8404-82b87af520a9" auto="0" top-xid="3"/>
+</history>
+<revisions show="1" mark="1" show-level="0" auto="0">
+<r id="1" time-started="1301624917" version="0" author="Ben Martin" >1</r>
+<r id="2" time-started="1301625074" version="0" author="Ben Martin" >2</r>
+<r id="3" time-started="1301625084" version="0" author="Ben Martin" >3</r>
+<r id="4" time-started="1301625089" version="0" author="Ben Martin" >4</r>
+<r id="5" time-started="1301625096" version="0" author="Ben Martin" >5</r>
+<r id="6" time-started="1301625102" version="0" author="Ben Martin" >6</r>
+<r id="7" time-started="1301625106" version="0" author="Ben Martin" >7</r>
+<r id="8" time-started="1301625110" version="0" author="Ben Martin" >8</r>
+<r id="9" time-started="1301625118" version="0" author="Ben Martin" >9</r>
+</revisions>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="2" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" ct:split-id="split0" xid="3"><c revision="1">This document demonstrates style changes which have intermixed changes between text:p and text:h also. The next paragraph changes to a non heading style, then a heading, then a normal style again, then h1,h2,h3 then back to normal and then to a plain text normal style. This should generate transitions to text:h and back and also include many ac:changeXXX attributes for intra element change tacking.</c><c revision="1"></c></p>
+<p revision="1,!2{}{style:Plain Text},!3{}{style:Heading 1},!4{}{style:Normal},!5{}{style:Heading 1},!6{}{style:Heading 2},!7{}{style:Heading 3},!8{}{style:Plain Text},!9{}{style:Normal}" xid="1"><c revision="1">This is the test paragraph.</c><c revision="1"></c></p>
+</section>
+</abiword>
