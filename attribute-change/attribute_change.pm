@@ -75,6 +75,11 @@ sub testtobolditalandback2 : Tests {
 						"to-bold-italic-and-back-to-normal2.rnc", "" );
 }
 
+sub testusinginternalstyles : Tests {
+    TestDoubleConversionToODTWithRelaxNGSchema( "using-internal-style-names.abw", 
+						"using-internal-style-names.rnc", "" );
+}
+
 
 
 # Leave this here
