@@ -123,14 +123,11 @@ sectioncore =
          attribute delta:insertion-change-idref {"1"},
          attribute delta:move-idref {"mv2"},
          ( attribute text:* { text } )*,
-         element delta:inserted-text-start {
-            attribute delta:inserted-text-id {text}, #{"ctid-2"},
-            attribute delta:insertion-change-idref {"2"}
-         },
-         text,
-#         "p3",
-         element delta:inserted-text-end {
-            attribute delta:inserted-text-idref {text} #{"ctid-2"}
+         element text:span {
+            attribute text:style-name {"T1"}, 
+            attribute delta:insertion-change-idref {"2"}, 
+            attribute delta:insertion-type {"insert-around-content"},
+            "p3"
          }
       },
       element delta:remove-leaving-content-end {

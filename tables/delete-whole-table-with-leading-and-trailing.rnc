@@ -224,6 +224,7 @@ sectioncore =
                   attribute delta:insertion-type {"split"}, 
                   attribute delta:insertion-change-idref{"1"},
                   attribute split:split01 {"split1"},
+                  attribute ac:change1 {"1,insert,text:style-name,"}?,
 
                   element delta:inserted-text-start {
                      attribute delta:inserted-text-id {"1"}
