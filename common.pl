@@ -1,5 +1,6 @@
 use Test::More;
 use IO::All;
+use File::Basename;
 
 #
 # These are a bit of a problem as they might have to be
@@ -16,7 +17,7 @@ $uid = `id -u`;
 chomp($uid);
 $tmpdir = "/tmp/$uid/";
 mkdir($tmpdir);
-$getidxvar=1;
+$getidxvar=0;
 
 
 sub Abiword_loadAndSave {
@@ -76,8 +77,13 @@ sub TestDoubleConversionToODTWithRelaxNGSchema {
 
     $fn = RunConversionAndVerifyRelaxNGSchema( $infile, $schemafile,
 					       "First conversion from abw to odf ($errorMsg)" );
-    $fn = Abiword_loadAndSave( $fn, "out2.abw" );
-    $fn = RunConversionAndVerifyRelaxNGSchema( $fn, $schemafile, 
+
+    $secondabw = fileparse($fn);
+    $secondabw =~ s/(.*)\.([^.]+)/\1/g;
+    $secondabw .= "_backto.abw";
+    
+    $fn = Abiword_loadAndSave( $fn, $secondabw );
+    $fn = RunConversionAndVerifyRelaxNGSchema( "$tmpdir/$secondabw", $schemafile, 
 					       "Second conversion from abw to odf ($errorMsg)" );
 }
 

@@ -22,10 +22,6 @@ sub teardown : Test(teardown) {
     diag("foo = ($foo) after test(s)");
 };
 
-sub alwaysgood : Tests {
-    is( 1, 1, "the world is sane");
-};
-
 
 
 sub test1 : Tests {

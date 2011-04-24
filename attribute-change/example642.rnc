@@ -45,6 +45,10 @@ tracked-changes =
       }+
    }
 
+identifier =
+    xsd:token { pattern="[A-Za-z_][A-Za-z_0-9]*" }
+
+
 sectioncore = 
    element text:section {
       attribute * {text}*,
@@ -83,7 +87,7 @@ sectioncore =
             " is "
          },
          element text:span {
-            attribute text:style-name {"T4"}, 
+            attribute text:style-name {xsd:token { pattern="T(3|4)" }},
             attribute delta:insertion-change-idref {"3"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
             attribute ac:change3 {"1,insert,text:style-name,"}, 
