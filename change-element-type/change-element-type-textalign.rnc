@@ -49,29 +49,38 @@ sectioncore =
    element text:section {
       attribute * {text}*,
 
-      element text:p {
-         attribute text:style-name {"Normal"},    
-         attribute delta:insertion-type {"insert-with-content"},  
-         attribute delta:insertion-change-idref {"1"},
-         text,
-         #"some ",
-         element text:span {
-            attribute text:style-name {"T1"}, 
-            attribute delta:insertion-change-idref {"4"}, 
-            attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change4 {"2,insert,text:style-name,"}, 
-            attribute ac:change5 {"3,modify,text:style-name,T2"}, 
-            attribute ac:change6 {"4,modify,text:style-name,T4"},
-            "text"
-         },
-         element text:span {
-            attribute text:style-name {xsd:token { pattern="T(6)" }},
-            attribute delta:insertion-change-idref {"5"}, 
-            attribute delta:insertion-type {"insert-around-content"},
-            "goes"
-         },
-         text
-         #" here"
-      }
+      element delta:remove-leaving-content-start {
+         attribute delta:removal-change-idref {"1"},
+         attribute delta:end-element-idref {"ee1"},
+         element text:p { attribute text:style-name {"Normal"} }
+      },
+
+      element delta:remove-leaving-content-start {
+         attribute delta:removal-change-idref {"2"},
+         attribute delta:end-element-idref {"ee2"},
+         element text:h { attribute text:style-name {"Heading-1"}, attribute text:outline-level {"1"} }
+      },
+
+      element text:p { 
+         attribute RR {text}?,
+         attribute ac:change1 {"5,insert,text:style-name,"}?,
+         attribute text:style-name {"Normal"},
+         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref {"5"},
+         (
+            element delta:inserted-text-start { attribute delta:inserted-text-id {"0"} }
+            | element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} }
+         ),
+         (element delta:inserted-text-start { 
+            attribute delta:inserted-text-id {"ctid-1"}, 
+            attribute delta:insertion-change-idref {"1"}
+         })?,
+         text, 
+         # "this is the text",
+         (element delta:inserted-text-end { attribute delta:inserted-text-idref{"ctid-1"} })?,
+         element delta:inserted-text-end { attribute delta:inserted-text-idref{ text } }
+      },
+
+      element delta:remove-leaving-content-end { attribute delta:end-element-id {"ee2"} },
+      element delta:remove-leaving-content-end { attribute delta:end-element-id {"ee1"} }
    }
-   

@@ -63,7 +63,9 @@ sectioncore =
 
       element text:p { 
          attribute RR {text}?,
-         attribute ac:change1 {"5,insert,text:style-name,"}?,
+         attribute ac:change1 {"3,insert,text:style-name,"}?,
+         attribute ac:change2 {"4,modify,text:style-name,Normal"}?,
+         attribute ac:change3 {"5,modify,text:style-name,Plain-Text"}?,
          attribute text:style-name {"Normal"},
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref {"5"},

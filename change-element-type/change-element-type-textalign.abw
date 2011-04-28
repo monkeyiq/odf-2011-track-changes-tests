@@ -30,6 +30,6 @@
 </styles>
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
 <section xid="2" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
-<p revision="!2{}{style:Heading 1},!3{}{style:Normal},!4{}{style:Plain Text},!5{}{style:Normal}" xid="3"><c revision="1">this is the text</c></p>
+<p revision="!2{}{style:Heading 1},!3{text-align:center},!4{text-align:right},!5{}{style:Normal}" xid="3"><c revision="1">this is the text</c></p>
 </section>
 </abiword>

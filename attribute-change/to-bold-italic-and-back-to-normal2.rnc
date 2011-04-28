@@ -61,11 +61,11 @@ sectioncore =
             attribute delta:insertion-type {"insert-around-content"}, 
             attribute ac:change4 {"2,insert,text:style-name,"}, 
             attribute ac:change5 {"3,modify,text:style-name,T2"}, 
-            attribute ac:change6 {"4,modify,text:style-name,T3"},
+            attribute ac:change6 {"4,modify,text:style-name,T4"},
             "text"
          },
          element text:span {
-            attribute text:style-name {"T4"}, 
+            attribute text:style-name {"T5"}, 
             attribute delta:insertion-change-idref {"6"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
             attribute ac:change3 {"5,insert,text:style-name,"}, 
