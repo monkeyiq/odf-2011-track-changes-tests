@@ -58,6 +58,13 @@ sub test2 : Tests {
 
 }
 
+sub test3 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "paragraph-delete-startp2-through-startp3.abw", 
+						"paragraph-delete-startp2-through-startp3.rnc", "" );
+
+}
+
 
 
 # Leave this here

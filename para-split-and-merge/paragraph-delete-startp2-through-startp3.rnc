@@ -49,19 +49,20 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
-         "one",
+         "This document contains a sequence of paragraphs for merge testing. In the following the next paragraph is merged with the one that follows it. This should result in abi:para deleted attributes being placed to mark the end of first and start of second paragraph deletion. Deletion will include the last 2 chars of the next para and the first 3 of the one following it.",
          attribute delta:insertion-type {"insert-with-content"}, 
-         attribute delta:insertion-change-idref{"1"},
          attribute split:split01 {"split0"},
+         attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
       },
       element text:p { 
-         text,
          attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"1"},
          attribute delta:split-id {"split0"}, 
          attribute split:split01 {"split1"},
+         attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*,
+         text,
+         # "This is a sample paragra",
          element delta:merge {
             attribute delta:removal-change-idref {"2"},
             element delta:leading-partial-content { anything },
@@ -72,108 +73,31 @@ sectioncore =
                   attribute delta:insertion-type {"split"}, 
                   attribute delta:insertion-change-idref{"1"},
                   attribute delta:split-id {"split1"}, 
-                  attribute split:split01 {"split2"},
-                  ( attribute text:* { text } )*
-               }
-            }
-         },
-         element delta:inserted-text-start {
-            attribute delta:inserted-text-id {"1"} 
-         },
-         text,
-         # "three",
-         element delta:inserted-text-end {
-            attribute delta:inserted-text-idref {"1"}
-         }
-      },
-      element text:p { 
-         "four",
-         attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"1"},
-         attribute delta:split-id {"split2"}, 
-         attribute split:split01 {"split3"},
-         ( attribute text:* { text } )*
-      },
-      element text:p { 
-         ( attribute text:* { text } )*,
-         text,
-         # "fiv",
-         attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"1"},
-         attribute delta:split-id {"split3"}, 
-         attribute split:split01 {"split4"},
-         element delta:merge {
-            attribute delta:removal-change-idref {"2"},
-            element delta:leading-partial-content {
-               "e"
-            },
-            element delta:intermediate-content {
-               element delta:removed-content {
-                  attribute RR {text}?,
-                  attribute delta:removal-change-idref {"2"},
-                  element text:p {
-                     ( attribute text:* { text } )*,
-                     attribute delta:insertion-type {"insert-with-content"},
-                     attribute delta:insertion-change-idref {"1"},
-                     (
-                        "six"
-                        |
-                        (
-                           element delta:inserted-text-start {
-                              attribute delta:inserted-text-id {"1"}
-                           },
-                           text,
-                           # "six"
-                           element delta:inserted-text-end {
-                              attribute delta:inserted-text-idref {"1"}
-                           }
-                           )
-                        )
-                  }
-               } #/delta:removed-content
-            }, #/delta:intermediate-content
-            element delta:trailing-partial-content {
-               element text:p {
                   ( attribute text:* { text } )*,
-                  attribute ac:change1 {"1,insert,text:style-name,"}?,
-                  attribute split:split01 {"split6"},
-                  attribute delta:split-id {"split5"},
-                  attribute delta:insertion-type {"split"},
-                  attribute delta:insertion-change-idref {"1"},
                   element delta:inserted-text-start {
                      attribute delta:inserted-text-id {"1"}
                   },
                   element delta:removed-content {
-                     attribute RR {text}?,
-                     ( attribute delta:removed-text-id {"ctid-1"}
-                        | attribute delta:removed-text-id {"ctid-2"} ),
+                     attribute RR {"2"},
+                     attribute delta:removed-text-id {"ctid-1"},
                      attribute delta:removal-change-idref {"2"},
-                     "se"
+                     "Thi"
                   },
                   element delta:inserted-text-end {
                      attribute delta:inserted-text-idref {"1"}
                   }
-               }  #/text:p
-            }     #/delta:trailing-partial-content
-         },       #/delta:merge
+               }
+            }
+         }, # end of delta:merge
 
          element delta:inserted-text-start {
-            ( attribute delta:inserted-text-id {"ctid-2"}
-               | attribute delta:inserted-text-id {"ctid-3"} ),
+            attribute delta:inserted-text-id {"ctid-2"},
             attribute delta:insertion-change-idref {"1"}
          },
          text,
-         #"ven",
+         # "three",
          element delta:inserted-text-end {
-            ( attribute delta:inserted-text-idref {"ctid-2"}
-               | attribute delta:inserted-text-idref {"ctid-3"} )
+            attribute delta:inserted-text-idref {"ctid-2"}
          }
-      },
-      element text:p { 
-         "and so on.",
-         attribute delta:insertion-type {"split"}, 
-         attribute delta:insertion-change-idref{"1"},
-         attribute delta:split-id {"split6"}, 
-         ( attribute text:* { text } )*
       }
    }

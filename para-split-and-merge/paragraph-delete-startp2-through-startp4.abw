@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="5" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Ben Martin</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="8" edit-time="140" last-saved="1306992654" uid="4285dbec-8cb0-11e0-9af6-a8de4bbc3ea2">
+<version id="1" started="1306975048" uid="7e8abce8-8cb0-11e0-9af6-a8de4bbc3ea2" auto="0" top-xid="5"/>
+<version id="2" started="1306976713" uid="5eaca87e-8cb4-11e0-9947-cd9df58cfeef" auto="0" top-xid="5"/>
+<version id="3" started="1306976803" uid="94d03c7c-8cb4-11e0-8001-bedbdbdf11de" auto="0" top-xid="5"/>
+<version id="4" started="1306976867" uid="bab1553e-8cb4-11e0-980e-fd01fb3df262" auto="0" top-xid="5"/>
+<version id="5" started="1306977064" uid="304256d6-8cb5-11e0-839a-9c7af562d090" auto="0" top-xid="5"/>
+<version id="6" started="1306977140" uid="5d1c0684-8cb5-11e0-9248-d7a05faf5cc6" auto="0" top-xid="5"/>
+<version id="7" started="1306977220" uid="8d1a27da-8cb5-11e0-9d30-f0418c98bf07" auto="0" top-xid="5"/>
+<version id="8" started="1306992654" uid="7c9dfdea-8cd9-11e0-84b6-fd5337dcad09" auto="0" top-xid="5"/>
+</history>
+<revisions show="1" mark="1" show-level="0" auto="0">
+<r id="1" time-started="1306974952" version="0" author="Ben Martin" >1</r>
+<r id="2" time-started="1306976712" version="0" author="Ben Martin" >5</r>
+</revisions>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; font-variant:normal; margin-left:0pt; widows:2; font-style:normal; text-indent:0in; text-position:normal; line-height:1.0; margin-bottom:0pt; bgcolor:transparent; margin-right:0pt; font-size:12pt; color:000000; text-decoration:none; font-weight:normal; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="4" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" ct:split-id="split0" xid="5"><c revision="1">In this example an entire paragraph (p3) is deleted. The deletion starts including the final word in p2, extends entirely through p3 and contains the first two words of p4.</c><c revision="1"></c></p>
+<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">This is the second </c><c revision="1,-2">paragraph.</c><c revision="1,-2"></c></p>
+<p ct:split-id-ref="split1" ct:split-id="split2" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" style="Normal" xid="2"><c revision="1,-2">This will be completely deleted.</c><c revision="1"></c></p>
+<p ct:split-id-ref="split2" ct:split-id="0" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="3"><c revision="1,-2">And more</c><c revision="1"> goes here to the end.</c><c revision="1"></c></p>
+</section>
+</abiword>

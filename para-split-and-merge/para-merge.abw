@@ -28,12 +28,12 @@
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
 <section xid="8" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
 <p style="Normal" ct:split-id="split0" xid="9"><c revision="1">one</c></p>
-<p ct:split-id-ref="split0" ct:split-id="split1" revision="1" style="Normal" xid="1"><c revision="1">two</c></p>
-<p ct:split-id-ref="split1" ct:split-id="split2" revision="1,-2" style="Normal" xid="2"><c revision="1">three</c></p>
+<p ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">two</c></p>
+<p ct:split-id-ref="split1" ct:split-id="split2" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="2"><c revision="1">three</c></p>
 <p ct:split-id-ref="split2" ct:split-id="split3" revision="1" style="Normal" xid="3"><c revision="1">four</c></p>
-<p ct:split-id-ref="split3" ct:split-id="split4" revision="1" style="Normal" xid="4"><c revision="1">fiv</c><c revision="1,-2">e</c></p>
-<p ct:split-id-ref="split4" ct:split-id="split5" revision="1" style="Normal" xid="5"><c revision="1,-2">six</c></p>
-<p ct:split-id-ref="split5" ct:split-id="split6" revision="1,-2" style="Normal" xid="6"><c revision="1,-2">se</c><c revision="1">ven</c></p>
+<p ct:split-id-ref="split3" ct:split-id="split4" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="4"><c revision="1">fiv</c><c revision="1,-2">e</c></p>
+<p ct:split-id-ref="split4" ct:split-id="split5" revision="1{}{abi-para-end-deleted-revision:2;abi-para-start-deleted-revision:2},-2" style="Normal" xid="5"><c revision="1,-2">six</c></p>
+<p ct:split-id-ref="split5" ct:split-id="split6" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="6"><c revision="1,-2">se</c><c revision="1">ven</c></p>
 <p ct:split-id-ref="split6" ct:split-id="0" revision="1" style="Normal" xid="7"><c revision="1">and so on.</c></p>
 </section>
 </abiword>
