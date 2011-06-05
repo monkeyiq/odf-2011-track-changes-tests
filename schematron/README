@@ -1,0 +1,6 @@
+The dist directory contains the schematron files from
+http://www.schematron.com/implementation.html
+
+This directory contains a script to run the schematron stylesheets on 
+a given instance and "sch" schematron input file using saxon.
+

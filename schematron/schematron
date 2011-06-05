@@ -1,0 +1,17 @@
+#!/bin/bash
+
+INPUTSCHEMA=$1
+DOC=$2
+
+BASE=$(dirname $0);
+
+SCHEMATRONDISTDIR=$BASE/dist/
+SD=$SCHEMATRONDISTDIR
+
+export TPATH=/tmp/schematron-tmp/
+mkdir -p /$TPATH
+
+saxon $INPUTSCHEMA              $SD/iso_dsdl_include.xsl    2>/dev/null >|/$TPATH/preprocessed.xsl
+saxon /$TPATH/preprocessed.xsl  $SD/iso_abstract_expand.xsl 2>/dev/null >|/$TPATH/preprocessed2.xsl
+saxon /$TPATH/preprocessed2.xsl $SD/iso_svrl_for_xslt2.xsl  2>/dev/null >|/$TPATH/schema.xsl
+saxon $DOC                      /$TPATH/schema.xsl          2>/dev/null  
