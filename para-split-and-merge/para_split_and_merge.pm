@@ -66,6 +66,35 @@ sub test3 : Tests {
 }
 
 
+sub test4 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "paragraph-delete-startp2-through-startp4.abw", 
+						"paragraph-delete-startp2-through-startp4.rnc", "" );
+
+}
+
+
+sub test5 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "delete-through-table.abw", 
+						"delete-through-table.rnc", "" );
+
+}
+
+sub test6 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "delete-through-table-with-afterpara.abw", 
+						"delete-through-table-with-afterpara.rnc", "" );
+
+}
+
+sub test7 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "delete-through-table-with-beforepara.abw", 
+						"delete-through-table-with-beforepara.rnc", "" );
+
+}
+
 
 # Leave this here
 1;

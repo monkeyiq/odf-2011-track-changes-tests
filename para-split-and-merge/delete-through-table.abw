@@ -30,7 +30,7 @@
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
 <section xid="25" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
 <p style="Normal" ct:split-id="split0" revision="!1{text-align:left;dom-dir:ltr}" xid="26"><c revision="1">This example deletes from one paragraph through an entire table to another para.</c><c revision="1"></c></p>
-<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">This is the para, last two words will be start of </c><c revision="1,-2">deleted zone.</c><c revision="1,-2"></c></p>
+<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">This is the para, last two words will be start of </c><c revision="1,-2">deleted zone.</c></p>
 <table revision="1,-2" xid="4">
 <cell revision="1,-2" xid="5" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
 <p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="6"><c revision="1,-2"></c><c revision="1,-2"></c></p>
