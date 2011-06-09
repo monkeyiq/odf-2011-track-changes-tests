@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="23" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Ben Martin</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="1" edit-time="55" last-saved="1307573514" uid="c7347e04-9221-11e0-9028-f6da14a0de08">
+<version id="1" started="1307573514" uid="e7beb18a-9221-11e0-9028-f6da14a0de08" auto="0" top-xid="23"/>
+</history>
+<revisions show="1" mark="1" show-level="0" auto="0">
+<r id="1" time-started="1307573463" version="0" author="Ben Martin" >1</r>
+<r id="2" time-started="1307573500" version="0" author="Ben Martin" >2</r>
+</revisions>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="22" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" ct:split-id="split0" xid="23"><c revision="1">This example has content within a table cell deleted.</c></p>
+<table revision="1" xid="2">
+<cell revision="1" xid="3" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" revision="1" xid="4"><c></c></p>
+</cell>
+<cell revision="1" xid="6" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" revision="1" xid="7"><c revision="1">This is the original content in full.</c></p>
+</cell>
+<cell revision="1" xid="9" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" revision="1" xid="10"><c></c></p>
+</cell>
+<cell revision="1" xid="12" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" revision="1" xid="13"><c></c></p>
+</cell>
+<cell revision="1" xid="15" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" revision="1" xid="16"><c></c></p>
+</cell>
+<cell revision="1" xid="18" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" revision="1" xid="19"><c></c></p>
+</cell>
+</table>
+<p ct:split-id-ref="split0" ct:split-id="0" revision="-1" style="Normal" xid="1"><c revision="1"></c></p>
+</section>
+</abiword>
