@@ -24,22 +24,6 @@ sub teardown : Test(teardown) {
 
 
 
-# sub test1 : Tests {
-#     my $outpath = Abiword_loadAndSave( "para-add.abw", "out.odt" );
-#     print "outpath:$outpath\n";
-# #    my $contents = Read_contentXml($outpath);
-# #    print "contents:$contents\n";
-
-#     my $contentFile = Extract_contentXml( $outpath );
-#     print "contentFile:$contentFile\n";
-#     ok( 0 == system("$jing -c para-add.rnc $contentFile"), 
-# 	"First conversion from abw to odf format ($?)" );
-
-#     my $outpathABW = Abiword_loadAndSave( $outpath, "out2.abw" );
-#     RunConversionAndVerifyRelaxNGSchema( $outpathABW, "para-add.rnc", 
-# 					 "Second conversion from abw to odf" );
-# };
-
 
 sub test1 : Tests {
 
@@ -92,6 +76,22 @@ sub test7 : Tests {
 
     TestDoubleConversionToODTWithRelaxNGSchema( "delete-through-table-with-beforepara.abw", 
 						"delete-through-table-with-beforepara.rnc", "" );
+
+}
+
+
+sub test8 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "copy-and-paste.abw", 
+						"copy-and-paste.rnc", "" );
+
+}
+
+
+sub test9 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "table-cell-fully-within.abw", 
+						"table-cell-fully-within.rnc", "" );
 
 }
 
