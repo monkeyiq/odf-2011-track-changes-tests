@@ -25,21 +25,31 @@ sub teardown : Test(teardown) {
 
 sub test1 : Tests {
 
-    TestDoubleConversionToODTWithRelaxNGSchema( "simple1.abw", "simple1.rnc", "" );
+    TestDoubleConversionToODTWithRelaxNGSchema( "simple1.abw", 
+						"simple1.rnc", "" );
 
 }
 
 
 sub test2 : Tests {
 
-    TestDoubleConversionToODTWithRelaxNGSchema( "simpletable.abw", "simpletable.rnc", "" );
+    TestDoubleConversionToODTWithRelaxNGSchema( "simpletable.abw", 
+						"simpletable.rnc", "" );
 
 }
 
 
 sub test3 : Tests {
 
-    TestDoubleConversionToODTWithRelaxNGSchema( "image.abw", "image.rnc", "" );
+    TestDoubleConversionToODTWithRelaxNGSchema( "image.abw", 
+						"image.rnc", "" );
+
+}
+
+sub test4 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "bullets-and-styles.abw", 
+						"bullets-and-styles.rnc", "" );
 
 }
 

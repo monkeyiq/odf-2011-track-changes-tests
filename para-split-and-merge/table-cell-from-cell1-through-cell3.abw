@@ -15,10 +15,10 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="4" edit-time="113" last-saved="1307573830" uid="369a83f6-9222-11e0-9090-91df4856ff7d">
+<history version="4" edit-time="105" last-saved="1309308785" uid="369a83f6-9222-11e0-9090-91df4856ff7d">
 <version id="1" started="1307573729" uid="67da6c9c-9222-11e0-9090-91df4856ff7d" auto="0" top-xid="29"/>
 <version id="3" started="1307573782" uid="8d4f8c8c-9222-11e0-8ed2-fb2735e0d2ad" auto="0" top-xid="29"/>
-<version id="4" started="1307573830" uid="a46fea2e-9222-11e0-8952-f216d6c46e8a" auto="0" top-xid="29"/>
+<version id="4" started="1309308785" uid="26325872-a1ea-11e0-984a-d3e69367ba59" auto="0" top-xid="29"/>
 </history>
 <revisions show="1" mark="1" show-level="0" auto="0">
 <r id="1" time-started="1307573688" version="0" author="Ben Martin" >1</r>
@@ -32,13 +32,13 @@
 <p style="Normal" xid="29"><c revision="1">Content is deleted starting in cell1 and through to cell3.</c><c revision="1"></c></p>
 <table revision="1" xid="2">
 <cell revision="1" xid="3" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
-<p baz="u2" delta:move-id="mv1" style="Normal" revision="1{}{abi-para-end-deleted-revision:2}" xid="4"><c revision="1">This is </c><c revision="1,-2">para1</c><c revision="1,-2"></c></p>
+<p baz="u2" delta:move-id="mv1" style="Normal" revision="1" xid="4"><c revision="1">This is </c><c revision="1,-2">para1</c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1" xid="6" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="7"><c revision="1,-2">This is para2</c><c revision="1"></c></p>
+<p style="Normal" revision="1{}{abi-para-deleted-revision:2},-2" xid="7"><c revision="1,-2">This is para2</c><c revision="1"></c></p>
 </cell>
 <cell revision="1" xid="9" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2},-2" xid="10"><c revision="1,-2">And Para3</c><c revision="1"> is here</c><c revision="1"></c></p>
+<p style="Normal" revision="1,-2" xid="10"><c revision="1,-2">And Para3</c><c revision="1"> is here</c><c revision="1"></c></p>
 </cell>
 <cell revision="1" xid="12" props="bot-attach:1; left-attach:3; right-attach:4; top-attach:0">
 <p style="Normal" revision="1" xid="13"><c revision="1">EOT</c><c revision="1"></c></p>

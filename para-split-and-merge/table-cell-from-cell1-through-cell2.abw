@@ -15,37 +15,38 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="2" edit-time="100" last-saved="1307573641" uid="f808cc74-9221-11e0-8d0e-8bed09fd6d60">
-<version id="2" started="1307573624" uid="33d676f2-9222-11e0-8d0e-8bed09fd6d60" auto="0" top-xid="23"/>
+<history version="2" edit-time="94" last-saved="1309307541" uid="f808cc74-9221-11e0-8d0e-8bed09fd6d60">
+<version id="1" started="1307573624" uid="29d19376-9222-11e0-8d0e-8bed09fd6d60" auto="0" top-xid="23"/>
+<version id="2" started="1309307541" uid="40a39098-a1e7-11e0-9070-b520ec32df35" auto="0" top-xid="23"/>
 </history>
 <revisions show="1" mark="1" show-level="0" auto="0">
 <r id="1" time-started="1307573560" version="0" author="Ben Martin" >1</r>
 <r id="2" time-started="1307573607" version="0" author="Ben Martin" >2</r>
 </revisions>
 <styles>
-<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
 </styles>
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
 <section xid="22" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
-<p style="Normal" ct:split-id="split0" xid="23"><c revision="1">Content is deleted starting in cell1 and continuing through to cell2.</c></p>
+<p style="Normal" ct:split-id="split0" xid="23"><c revision="1">Content is deleted starting in cell1 and continuing through to cell2.</c><c revision="1"></c></p>
 <table revision="1" xid="2">
 <cell revision="1" xid="3" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
-<p baz="u2" delta:move-id="mv1" style="Normal" revision="1{}{abi-para-end-deleted-revision:2}" xid="4"><c revision="1">This is </c><c revision="1,-2">para1</c></p>
+<p baz="u2" delta:move-id="mv1" style="Normal" revision="1" xid="4"><c revision="1">This is </c><c revision="1,-2">para1</c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1" xid="6" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2},-2" xid="7"><c revision="1,-2">And para2</c><c revision="1"> is in this cell.</c></p>
+<p style="Normal" revision="1,-2" xid="7"><c revision="1,-2">And para2</c><c revision="1"> is in this cell.</c><c revision="1"></c></p>
 </cell>
 <cell revision="1" xid="9" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
-<p style="Normal" revision="1" xid="10"><c></c></p>
+<p style="Normal" revision="1" xid="10"><c></c><c></c></p>
 </cell>
 <cell revision="1" xid="12" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
-<p style="Normal" revision="1" xid="13"><c></c></p>
+<p style="Normal" revision="1" xid="13"><c></c><c></c></p>
 </cell>
 <cell revision="1" xid="15" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
-<p style="Normal" revision="1" xid="16"><c></c></p>
+<p style="Normal" revision="1" xid="16"><c></c><c></c></p>
 </cell>
 <cell revision="1" xid="18" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
-<p style="Normal" revision="1" xid="19"><c></c></p>
+<p style="Normal" revision="1" xid="19"><c></c><c></c></p>
 </cell>
 </table>
 <p ct:split-id-ref="split0" ct:split-id="0" revision="-1" style="Normal" xid="1"><c revision="1"></c></p>

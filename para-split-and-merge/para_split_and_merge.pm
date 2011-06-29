@@ -88,10 +88,40 @@ sub test8 : Tests {
 }
 
 
-sub test9 : Tests {
+sub test10 : Tests {
 
-    TestDoubleConversionToODTWithRelaxNGSchema( "table-cell-fully-within.abw", 
-						"table-cell-fully-within.rnc", "" );
+    TestDoubleConversionToODTWithRelaxNGSchema( "table-cell-from-cell1-through-cell2.abw", 
+						"table-cell-from-cell1-through-cell2.rnc", "" );
+
+}
+
+
+sub test11 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "table-cell-from-cell1-through-cell3.abw", 
+						"table-cell-from-cell1-through-cell3.rnc", "" );
+
+}
+
+sub test12 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "table-cell-with-many-paras.abw", 
+						"table-cell-with-many-paras.rnc", "" );
+
+}
+
+sub test13 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "delete-mid-p2-to-end-p3.abw", 
+						"delete-mid-p2-to-end-p3.rnc", "" );
+
+}
+
+
+sub test14 : Tests {
+
+    TestDoubleConversionToODTWithRelaxNGSchema( "multiversion-para-delete.abw", 
+						"multiversion-para-delete.rnc", "" );
 
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
-<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="9" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="10" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
 <!-- ======================================================================== -->
 <!-- This file is an AbiWord document.                                        -->
 <!-- AbiWord is a free, Open Source word processor.                           -->
@@ -15,25 +15,27 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="1" edit-time="50" last-saved="1294971676" uid="d9764af8-1f84-11e0-89b5-d56455fd0112">
-<version id="1" started="1294971676" uid="f772b118-1f84-11e0-89b5-d56455fd0112" auto="0" top-xid="9"/>
+<history version="2" edit-time="170" last-saved="1309152461" uid="767e8636-a071-11e0-8802-8d950ba3d865">
+<version id="1" started="1309147162" uid="d71da5f8-a071-11e0-8802-8d950ba3d865" auto="0" top-xid="10"/>
+<version id="2" started="1309152461" uid="2dacb3ee-a07e-11e0-8e61-872e29730a75" auto="0" top-xid="10"/>
 </history>
 <revisions show="1" mark="1" show-level="0" auto="0">
-<r id="1" time-started="1294971629" version="0" author="Ben Martin" >a</r>
-<r id="2" time-started="1294971660" version="0" author="Ben Martin" >b</r>
+<r id="1" time-started="1309147002" version="0" author="Ben Martin" >1</r>
+<r id="2" time-started="1309147152" version="0" author="Ben Martin" >2</r>
 </revisions>
 <styles>
-<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
+<s type="C" name="Reference" props="font-size:10pt"/>
 </styles>
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
-<section xid="8" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
-<p style="Normal" ct:split-id="split0" xid="9"><c revision="1">one</c></p>
-<p ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">two</c></p>
-<p ct:split-id-ref="split1" ct:split-id="split2" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="2"><c revision="1">three</c></p>
-<p ct:split-id-ref="split2" ct:split-id="split3" revision="1" style="Normal" xid="3"><c revision="1">four</c></p>
-<p ct:split-id-ref="split3" ct:split-id="split4" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="4"><c revision="1">fiv</c><c revision="1,-2">e</c></p>
-<p ct:split-id-ref="split4" ct:split-id="split5" revision="1{}{abi-para-end-deleted-revision:2;abi-para-start-deleted-revision:2},-2" style="Normal" xid="5"><c revision="1,-2">six</c></p>
-<p ct:split-id-ref="split5" ct:split-id="split6" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="6"><c revision="1,-2">se</c><c revision="1">ven</c></p>
-<p ct:split-id-ref="split6" ct:split-id="0" revision="1" style="Normal" xid="7"><c revision="1">and so on.</c></p>
+<section xid="9" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" ct:split-id="split0" xid="10"><c revision="1">In this example, paragraphs contain the words indicating their position and various of them are merged. This is para1. Para2 has it’s end deleted to merge it with Para3 (ie, delete pressed at end of the line containing Para2). Para 4 is normal. Para 5 has its last char deleted, the the delete extending through Para6 and containing the first two characters of Para7. Para8 is normal and is the last para.</c><c revision="1"></c></p>
+<p ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">two</c><c revision="1"></c></p>
+<p ct:split-id-ref="split1" ct:split-id="split2" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="3"><c revision="1">three</c><c revision="1"></c></p>
+<p ct:split-id-ref="split2" ct:split-id="split3" revision="1" style="Normal" xid="4"><c revision="1">four</c><c revision="1"></c></p>
+<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split3" ct:split-id="split4" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="5"><c revision="1">fiv</c><c revision="1,-2">e</c><c revision="1,-2"></c></p>
+<p ct:split-id-ref="split4" ct:split-id="split5" revision="1{}{abi-para-end-deleted-revision:2;abi-para-deleted-revision:2;abi-para-start-deleted-revision:2},-2" style="Normal" xid="6"><c revision="1,-2">six</c><c revision="1"></c></p>
+<p ct:split-id-ref="split5" ct:split-id="split6" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="7"><c revision="1,-2">se</c><c revision="1">ven</c><c revision="1"></c></p>
+<p ct:split-id-ref="split6" ct:split-id="0" revision="1" style="Normal" xid="8"><c revision="1">the last.</c><c revision="1"></c></p>
 </section>
 </abiword>

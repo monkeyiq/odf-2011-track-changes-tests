@@ -15,40 +15,41 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="2" edit-time="101" last-saved="1307608212" uid="755ab7d2-9272-11e0-8133-b3299383c02f">
-<version id="2" started="1307608192" uid="b1a8b6da-9272-11e0-8133-b3299383c02f" auto="0" top-xid="26"/>
+<history version="2" edit-time="96" last-saved="1309307752" uid="755ab7d2-9272-11e0-8133-b3299383c02f">
+<version id="1" started="1307608192" uid="a5d345a0-9272-11e0-8133-b3299383c02f" auto="0" top-xid="26"/>
+<version id="2" started="1309307752" uid="be44ca94-a1e7-11e0-922c-a460864760a0" auto="0" top-xid="26"/>
 </history>
 <revisions show="1" mark="1" show-level="0" auto="0">
 <r id="1" time-started="1307608113" version="0" author="Ben Martin" >1</r>
 <r id="2" time-started="1307608170" version="0" author="Ben Martin" >2</r>
 </revisions>
 <styles>
-<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
 </styles>
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
 <section xid="25" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
-<p style="Normal" xid="26"><c revision="1">This table has some multiple paragraph cells.</c></p>
+<p style="Normal" xid="26"><c revision="1">This table has some multiple paragraph cells.</c><c revision="1"></c></p>
 <table revision="1" xid="2">
 <cell revision="1" xid="3" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
-<p style="Normal" ct:split-id="split0" revision="1" xid="4"><c revision="1">This is P1</c></p>
-<p ct:split-id-ref="split0" ct:split-id="0" revision="1" style="Normal" xid="22"><c revision="1">This is the second</c></p>
+<p style="Normal" ct:split-id="split0" revision="1" xid="4"><c revision="1">This is P1</c><c revision="1"></c></p>
+<p ct:split-id-ref="split0" ct:split-id="0" revision="1" style="Normal" xid="22"><c revision="1">This is the second</c><c revision="1"></c></p>
 </cell>
 <cell revision="1" xid="6" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
-<p style="Normal" ct:split-id="split1" revision="1" xid="7"><c revision="1">This cell will have the second</c></p>
-<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split1" ct:split-id="split2" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="23"><c revision="1">Join</c><c revision="1,-2">ed to </c></p>
-<p ct:split-id-ref="split2" ct:split-id="0" revision="1,!1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="24"><c revision="1"></c><c revision="1,-2">the </c><c revision="1">third</c></p>
+<p style="Normal" ct:split-id="split1" revision="1" xid="7"><c revision="1">This cell will have the second</c><c revision="1"></c></p>
+<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split1" ct:split-id="split2" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="23"><c revision="1">Join</c><c revision="1,-2">ed to </c><c revision="1,-2"></c></p>
+<p ct:split-id-ref="split2" ct:split-id="0" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="24"><c revision="1,-2"></c><c revision="1,-2">the </c><c revision="1">third</c></p>
 </cell>
 <cell revision="1" xid="9" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
-<p style="Normal" revision="1" xid="10"><c revision="1">EOT</c></p>
+<p style="Normal" revision="1" xid="10"><c revision="1">EOT</c><c revision="1"></c></p>
 </cell>
 <cell revision="1" xid="12" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
-<p style="Normal" revision="1" xid="13"><c></c></p>
+<p style="Normal" revision="1" xid="13"><c></c><c></c></p>
 </cell>
 <cell revision="1" xid="15" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
-<p style="Normal" revision="1" xid="16"><c></c></p>
+<p style="Normal" revision="1" xid="16"><c></c><c></c></p>
 </cell>
 <cell revision="1" xid="18" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
-<p style="Normal" revision="1" xid="19"><c></c></p>
+<p style="Normal" revision="1" xid="19"><c></c><c></c></p>
 </cell>
 </table>
 <p style="Normal" revision="1" xid="1"><c revision="1"></c></p>

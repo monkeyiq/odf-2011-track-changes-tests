@@ -49,7 +49,7 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
-         "one",
+         "In this example, paragraphs contain the words indicating their position and various of them are merged. This is para1. Para2 has it’s end deleted to merge it with Para3 (ie, delete pressed at end of the line containing Para2). Para 4 is normal. Para 5 has its last char deleted, the the delete extending through Para6 and containing the first two characters of Para7. Para8 is normal and is the last para.",
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref{"1"},
          attribute split:split01 {"split0"},
@@ -170,7 +170,7 @@ sectioncore =
          }
       },
       element text:p { 
-         "and so on.",
+         "the last.",
          attribute delta:insertion-type {"split"}, 
          attribute delta:insertion-change-idref{"1"},
          attribute delta:split-id {"split6"}, 

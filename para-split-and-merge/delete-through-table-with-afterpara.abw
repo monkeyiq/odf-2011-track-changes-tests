@@ -15,10 +15,10 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="3" edit-time="79" last-saved="1306992584" uid="ff8e3d1e-8cb6-11e0-8d17-8d8f89c3a8b4">
+<history version="3" edit-time="80" last-saved="1309174116" uid="ff8e3d1e-8cb6-11e0-8d17-8d8f89c3a8b4">
 <version id="1" started="1306977912" uid="29672376-8cb7-11e0-8d17-8d8f89c3a8b4" auto="0" top-xid="26"/>
 <version id="2" started="1306977946" uid="3db42040-8cb7-11e0-8a76-a7e7d9cc1153" auto="0" top-xid="26"/>
-<version id="3" started="1306992584" uid="5285d9c4-8cd9-11e0-8ebe-b50c7b326291" auto="0" top-xid="26"/>
+<version id="3" started="1309174116" uid="990ce3f2-a0b0-11e0-9064-f6f75eb5b91a" auto="0" top-xid="26"/>
 </history>
 <revisions show="1" mark="1" show-level="0" auto="0">
 <r id="1" time-started="1306977844" version="0" author="Ben Martin" >1</r>
@@ -33,25 +33,25 @@
 <p baz="u2" delta:move-id="mv1" ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-end-deleted-revision:2}" style="Normal" xid="1"><c revision="1">This is the para, last two words will be start of </c><c revision="1,-2">deleted zone.</c><c revision="1,-2"></c></p>
 <table revision="1,-2" xid="4">
 <cell revision="1,-2" xid="5" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="6"><c revision="1,-2"></c><c revision="1,-2"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="6"><c revision="1,-2"></c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1,-2" xid="8" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="9"><c revision="1,-2"></c><c revision="1,-2"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="9"><c revision="1,-2"></c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1,-2" xid="11" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="12"><c revision="1,-2"></c><c revision="1,-2"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="12"><c revision="1,-2"></c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1,-2" xid="14" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="15"><c revision="1,-2"></c><c revision="1,-2"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="15"><c revision="1,-2"></c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1,-2" xid="17" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="18"><c revision="1,-2"></c><c revision="1,-2"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="18"><c revision="1,-2"></c><c revision="1,-2"></c></p>
 </cell>
 <cell revision="1,-2" xid="20" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="21"><c revision="1,-2"></c><c revision="1,-2"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="21"><c revision="1,-2"></c><c revision="1,-2"></c></p>
 </cell>
 </table>
-<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="1"><c revision="1,-2">This will be deleted entirely.</c><c revision="1"></c></p>
+<p style="Normal" revision="1{}{abi-para-start-deleted-revision:2;abi-para-deleted-revision:2;abi-para-end-deleted-revision:2},-2" xid="1"><c revision="1,-2">This will be deleted entirely.</c><c revision="1"></c></p>
 <p ct:split-id-ref="split0" ct:split-id="split1" revision="1{}{abi-para-start-deleted-revision:2},-2" style="Normal" xid="3"><c revision="1,-2">This is the para</c><c revision="1"> which will have its start deleted.</c><c revision="1"></c></p>
 <p ct:split-id-ref="split1" ct:split-id="0" revision="1" style="Normal" xid="24"><c revision="1">End of file.</c><c revision="1"></c></p>
 </section>
