@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="25" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Ben Martin</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="1" edit-time="76" last-saved="1309406788" uid="275d45ba-a2ce-11e0-9c73-b288181fc577">
+<version id="1" started="1309406788" uid="54a9bd1e-a2ce-11e0-9c73-b288181fc577" auto="0" top-xid="25"/>
+</history>
+<revisions show="1" mark="1" show-level="0" auto="0">
+<r id="1" time-started="1309406716" version="0" author="Ben Martin" >1</r>
+<r id="2" time-started="1309406776" version="0" author="Ben Martin" >2</r>
+</revisions>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="24" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" ct:split-id="split0" xid="25"><c revision="1">A deletion is done starting mid way through para2 and extending beyond the table into a paragraph on the other side.</c></p>
+<p ct:split-id-ref="split0" ct:split-id="0" revision="1" style="Normal" xid="1"><c revision="1">This is para2.</c></p>
+<table revision="1" xid="3">
+<cell revision="1" xid="4" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" revision="1" xid="5"><c revision="1">Table Cell 1</c></p>
+</cell>
+<cell revision="1" xid="7" props="bot-attach:1; left-attach:1; right-attach:2; top-attach:0">
+<p style="Normal" revision="1" xid="8"><c revision="1">Cell2</c></p>
+</cell>
+<cell revision="1" xid="10" props="bot-attach:1; left-attach:2; right-attach:3; top-attach:0">
+<p style="Normal" revision="1" xid="11"><c revision="1">Top Right</c></p>
+</cell>
+<cell revision="1" xid="13" props="bot-attach:2; left-attach:0; right-attach:1; top-attach:1">
+<p style="Normal" revision="1" xid="14"><c></c></p>
+</cell>
+<cell revision="1" xid="16" props="bot-attach:2; left-attach:1; right-attach:2; top-attach:1">
+<p style="Normal" revision="1" xid="17"><c revision="1">Bottom Middle</c></p>
+</cell>
+<cell revision="1" xid="19" props="bot-attach:2; left-attach:2; right-attach:3; top-attach:1">
+<p style="Normal" revision="1" xid="20"><c></c></p>
+</cell>
+</table>
+<p ct:split-id-ref="split0" ct:split-id="split1" revision="1" style="Normal" xid="2"><c revision="1">This is after the table.</c></p>
+<p ct:split-id-ref="split1" ct:split-id="0" revision="1" style="Normal" xid="23"><c revision="1">eod</c></p>
+</section>
+</abiword>
