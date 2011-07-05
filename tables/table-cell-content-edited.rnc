@@ -49,7 +49,7 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
-         "paragraph one",
+         "This example performs various edits to table cells including deletion of all content in a cell2. More content is added to the botom middle cell and the bottom right has a replacement done.",
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
@@ -62,29 +62,41 @@ sectioncore =
          element table:table-column { text },
          element table:table-column { text },
          element table:table-row {
+
             element table:table-cell {
                attribute table:style-name { text },
-
                element text:p { 
-                  ( attribute text:* { text } )*,
+                  ( attribute  text:* { text } )*,
+                  ( attribute split:* { text } )*,
+                  attribute delta:insertion-type {"insert-with-content"}, 
+                  attribute delta:insertion-change-idref{"1"},
+                  "Cell1"
+               },
+               element text:p { 
+                  ( attribute  text:* { text } )*,
+                  ( attribute split:* { text } )*,
+                  attribute delta:split-id { text }?,
+                  attribute delta:insertion-type {"split"}, 
+                  attribute delta:insertion-change-idref{"1"},
+                  "C1P2"
+               }
+            },
+
+            element table:table-cell {
+               attribute table:style-name { text },
+               element text:p { 
+                  ( attribute  text:* { text } )*,
+                  ( attribute split:* { text } )*,
                   attribute delta:insertion-type {"insert-with-content"}, 
                   attribute delta:insertion-change-idref{"1"},
                   text,
-                  # "cell1",
-                  element delta:inserted-text-start  
-                  {
-                     attribute delta:inserted-text-id {"ctid-1"},
-                     attribute delta:insertion-change-idref {"2"}
-                  },
-                  text,
-                  #"more trailing",
-                  element delta:inserted-text-end {
-                     attribute delta:inserted-text-idref {"ctid-1"}
+                  element delta:removed-content {
+                     attribute RR {text}?,
+                     attribute delta:removal-change-idref {"2"},
+                     attribute delta:removed-text-id {text},
+                     "This is cell2."
                   }
-               }
-            },
-            element table:table-cell {
-               attribute table:style-name { text },
+               },
                element delta:removed-content {
                   attribute RR {text}?,
                   attribute delta:removal-change-idref {"2"},
@@ -92,14 +104,14 @@ sectioncore =
                      ( attribute text:* { text } )*,
                      attribute delta:insertion-type {"insert-with-content"}, 
                      attribute delta:insertion-change-idref{"1"},
-                     ( "c2"
-                        |
+                     ( "It will be deleted in r2 completely."
+                      |
                         (
                            element delta:inserted-text-start {
                               attribute delta:inserted-text-id {"1"}
                            },
                            text,
-                           # "c2",
+                           # "It will be deleted in r2 completely.",
                            element delta:inserted-text-end {
                               attribute delta:inserted-text-idref {"1"}
                            }
@@ -114,18 +126,7 @@ sectioncore =
                   ( attribute text:* { text } )*,
                   attribute delta:insertion-type {"insert-with-content"}, 
                   attribute delta:insertion-change-idref{"1"},
-                  element delta:inserted-text-start  
-                  {
-                     attribute delta:inserted-text-id {"ctid-2"},
-                     attribute delta:insertion-change-idref {"2"}
-                  },
-                  text,
-                  #"leading content ",
-                  element delta:inserted-text-end {
-                     attribute delta:inserted-text-idref {"ctid-2"}
-                  },
-                  text
-                  # "c3"
+                  "c3"
                }
             }
          },
@@ -146,19 +147,19 @@ sectioncore =
                   attribute delta:insertion-type {"insert-with-content"}, 
                   attribute delta:insertion-change-idref{"1"},
                   text,
-                  #"middle ",
+                  #"Some editing is  ",
                   element delta:inserted-text-start  
                   {
-                     attribute delta:inserted-text-id {"ctid-3"},
+                     attribute delta:inserted-text-id {text},
                      attribute delta:insertion-change-idref {"2"}
                   },
                   text,
-                  #"extra text ",
+                  #"really and truely ",
                   element delta:inserted-text-end {
-                     attribute delta:inserted-text-idref {"ctid-3"}
+                     attribute delta:inserted-text-idref {text}
                   },
                   text
-                  # "bottom cell"
+                  # "surely needed."
                }
             },
 
@@ -168,24 +169,42 @@ sectioncore =
                   ( attribute text:* { text } )*,
                   attribute delta:insertion-type {"insert-with-content"}, 
                   attribute delta:insertion-change-idref{"1"},
-                  text?
+                  text,
+                  element delta:removed-content {
+                     attribute RR {text}?,
+                     attribute delta:removal-change-idref {"2"},
+                     attribute delta:removed-text-id { text },
+                     "something"
+                  },
+                  element delta:inserted-text-start  
+                  {
+                     attribute delta:inserted-text-id {text},
+                     attribute delta:insertion-change-idref {"2"}
+                  },
+                  text,
+                  #"this ",
+                  element delta:inserted-text-end {
+                     attribute delta:inserted-text-idref {text}
+                  },
+                  text
                }
             }
          }
       },
       element text:p { 
-         "para two",
-         attribute split:split01 {"split0"},
-         attribute delta:insertion-type {"insert-with-content"}, 
+         "After the table has left us.",
+         attribute delta:insertion-type { text }, 
          attribute delta:insertion-change-idref{"1"},
-         ( attribute text:* { text } )*
+         ( attribute  text:* { text } )*,
+         ( attribute split:* { text } )*
       },
       element text:p { 
-         "last para.",
-         attribute delta:split-id {"split0"},
-         attribute delta:insertion-type {"split"}, 
+         "eod",
+         attribute delta:insertion-type { text }, 
          attribute delta:insertion-change-idref{"1"},
-         ( attribute text:* { text } )*
+         attribute delta:split-id { text }?,
+         ( attribute  text:* { text } )*,
+         ( attribute split:* { text } )*
       }
    }
 

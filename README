@@ -47,3 +47,11 @@ why).
 $ cd para-add-delete
 $ ./para_and_delete::Test.t
 
+To test just a single thing from the unit test of a directory use
+the following. The export line names the specific sub from the .pm
+file you want to run. It is a regex, so .* will return to all tests.
+
+$ cd para-add-delete
+$ export TEST_METHOD=test5
+$ ./para_and_delete::Test.t
+

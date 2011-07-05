@@ -68,19 +68,20 @@ sectioncore =
             element table:table-row {
                element table:table-cell {
                   attribute table:style-name { text },
-                  element delta:removed-content {
-                     attribute RR {text}?,
-                     attribute delta:removal-change-idref {"2"},
                      element text:p { 
                         ( attribute text:* { text } )*,
                         attribute delta:insertion-type {"insert-with-content"}, 
                         attribute delta:insertion-change-idref{"1"},
                         element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} }?,
-                        text,
+                        element delta:removed-content {
+                           attribute RR {text}?,
+                           attribute delta:removal-change-idref {"2"},
+                           attribute delta:removed-text-id { text },
+                           text
+                        },
                         # "Three columns, 2 rows"
                         element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }?
                      }
-                  }
                },
                element table:table-cell {
                   attribute table:style-name { text },
@@ -92,9 +93,6 @@ sectioncore =
                         text?
                      }
                    |
-                     element delta:removed-content {
-                        attribute RR {text}?,
-                        attribute delta:removal-change-idref {"2"},
                         element text:p { 
                            ( attribute text:* { text } )*,
                            attribute delta:insertion-type {"insert-with-content"}, 
@@ -103,7 +101,6 @@ sectioncore =
                            text?,
                            element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }?
                         }
-                     }
                   )
                },
                element table:table-cell {
@@ -116,9 +113,6 @@ sectioncore =
                         text?
                      }
                    |
-                     element delta:removed-content {
-                        attribute RR {text}?,
-                        attribute delta:removal-change-idref {"2"},
                         element text:p { 
                            ( attribute text:* { text } )*,
                         attribute delta:insertion-type {"insert-with-content"}, 
@@ -127,7 +121,6 @@ sectioncore =
                            text?,
                         element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }?
                         }
-                     }
                   )
                }
             },
@@ -142,9 +135,6 @@ sectioncore =
                         text?
                      }
                    |
-                     element delta:removed-content {
-                        attribute RR {text}?,
-                        attribute delta:removal-change-idref {"2"},
                         element text:p { 
                            ( attribute text:* { text } )*,
                            attribute delta:insertion-type {"insert-with-content"}, 
@@ -153,7 +143,6 @@ sectioncore =
                            text?,
                            element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }? 
                         }
-                     }
                   )
                },
                element table:table-cell {
@@ -166,9 +155,6 @@ sectioncore =
                         text?
                      }
                    |
-                     element delta:removed-content {
-                        attribute RR {text}?,
-                        attribute delta:removal-change-idref {"2"},
                         element text:p { 
                            ( attribute text:* { text } )*,
                            attribute delta:insertion-type {"insert-with-content"}, 
@@ -177,7 +163,6 @@ sectioncore =
                            text?,
                            element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} } 
                         }
-                     }
                   )
                },
                element table:table-cell {
@@ -190,9 +175,6 @@ sectioncore =
                         text?
                      }
                    |
-                     element delta:removed-content {
-                        attribute RR {text}?,
-                        attribute delta:removal-change-idref {"2"},
                         element text:p { 
                            ( attribute text:* { text } )*,
                            attribute delta:insertion-type {"insert-with-content"}, 
@@ -201,7 +183,6 @@ sectioncore =
                            text?,
                            element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} } 
                         }
-                     }
                   )
                }
             }

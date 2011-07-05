@@ -56,12 +56,13 @@ sectioncore =
       },
       element delta:removed-content {
          attribute RR {text}?,
+         attribute delta:move-id { text }?,
          attribute delta:removal-change-idref {"3"},
          element text:p {
             ( attribute * - (delta:*) { text } )*,
             attribute delta:insertion-type {"insert-with-content"}, 
             attribute delta:insertion-change-idref{"2"},
-            ( "Inserted paragraph here!"
+            ( "Inserted in r2."
                | 
                ( 
                   element delta:inserted-text-start {
@@ -77,7 +78,8 @@ sectioncore =
       },
       element text:p {
          text,
-         attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-type { text }, 
+         attribute delta:split-id { text }?,
          attribute delta:insertion-change-idref{"1"},
          ( attribute * - (delta:*) { text } )*
       }

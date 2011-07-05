@@ -118,13 +118,20 @@ sub test13 : Tests {
 }
 
 
+
+
 sub test14 : Tests {
 
-    TestDoubleConversionToODTWithRelaxNGSchema( "multiversion-para-delete.abw", 
-						"multiversion-para-delete.rnc", "" );
+    TestDoubleConversionToODTWithRelaxNGSchema( "middle-para-span-del-with-end-del.abw", 
+						"middle-para-span-del-with-end-del.rnc", "" );
 
 }
 
+# TODO
+# sub test15 : Tests {
+#     TestDoubleConversionToODTWithRelaxNGSchema( "multiversion-para-delete.abw", 
+# 						  "multiversion-para-delete.rnc", "" );
+# }
 
 # Leave this here
 1;

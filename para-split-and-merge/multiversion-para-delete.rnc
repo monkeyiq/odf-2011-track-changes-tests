@@ -49,7 +49,7 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
-         "In this document a deletion is done from the middle of para2 through to the end of para3. It should result in no delta:m being used.",
+         "In this document para3 and para4 are joined in revision 2 and in rev3 para2 through into para5 is deleted. This creates a case where an old delete is inside a new one. FIXME: TODO",
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute split:split01 {"split0"},
          attribute delta:insertion-change-idref{"1"},

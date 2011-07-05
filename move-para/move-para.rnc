@@ -49,14 +49,14 @@ sectioncore =
    element text:section {
       attribute * {text}*,
       element text:p { 
-         "p1",
+         "In this document para3 is moved from its original location to after para5.",
          attribute split:split01 {"split0"},
          attribute delta:insertion-type {"insert-with-content"}, 
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
       },
       element text:p { 
-         "p2",
+         "para2",
          attribute split:split01 {"split1"},
          attribute delta:split-id {"split0"},
          attribute delta:insertion-type {"split"}, 
@@ -70,7 +70,7 @@ sectioncore =
          # para contents can be slightly differently formed the second time.
          (
             element text:p { 
-               "p3",
+               "para3",
                attribute delta:insertion-type {"insert-with-content"}, 
                attribute delta:insertion-change-idref{"1"},
                ( attribute text:* { text } )*
@@ -84,7 +84,7 @@ sectioncore =
                   attribute delta:inserted-text-id {"1"}
                },
                text,
-               #           "p3",
+               #           "para3",
                element delta:inserted-text-end {
                   attribute delta:inserted-text-idref {"1"}
                }
@@ -98,11 +98,18 @@ sectioncore =
          attribute delta:split-id {"split2"},
          attribute delta:insertion-type {"split"}, 
          attribute delta:insertion-change-idref{"1"},
-         text
+         element delta:inserted-text-start {
+            attribute delta:inserted-text-id {"1"}
+         }?,
+         text,
+         # "para4",
+         element delta:inserted-text-end {
+            attribute delta:inserted-text-idref {"1"}
+         }?
       },
 
       element text:p { 
-         "p5",
+         "para5",
          attribute split:split01 {"split4"},
          attribute delta:split-id {"split3"},
          attribute delta:insertion-type {"split"}, 
@@ -127,14 +134,14 @@ sectioncore =
             attribute text:style-name {"T1"}, 
             attribute delta:insertion-change-idref {"2"}, 
             attribute delta:insertion-type {"insert-around-content"},
-            "p3"
+            "para3"
          }
       },
       element delta:remove-leaving-content-end {
          attribute delta:end-element-id {"ee1"}
       }?,
       element text:p { 
-         "p6",
+         "para6",
          attribute split:split01 {"split5"},
          attribute delta:split-id {"split4"},
          attribute delta:insertion-type {"split"}, 
@@ -143,7 +150,7 @@ sectioncore =
          ( attribute text:* { text } )*
       },
       element text:p { 
-         "p7",
+         "para7",
          attribute split:split01 {"split6"},
          attribute delta:split-id {"split5"},
          attribute delta:insertion-type {"split"}, 
@@ -151,7 +158,7 @@ sectioncore =
          ( attribute text:* { text } )*
       },
       element text:p { 
-         "p8",
+         "para8",
          attribute split:split01 {"split7"},
          attribute delta:split-id {"split6"},
          attribute delta:insertion-type {"split"}, 
@@ -162,6 +169,7 @@ sectioncore =
          attribute delta:split-id {"split7"}?,
          attribute delta:insertion-type {"split"}?, 
          attribute delta:insertion-change-idref{"1"}?,
+         text,
          ( attribute text:* { text } )*
       }
    }

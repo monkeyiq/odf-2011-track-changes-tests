@@ -15,8 +15,9 @@
 </metadata>
 <rdf>
 </rdf>
-<history version="2" edit-time="85" last-saved="1309175204" uid="ef31f266-a0b2-11e0-8fcf-bf1478bfc1c0">
-<version id="2" started="1309175189" uid="21da0532-a0b3-11e0-8fcf-bf1478bfc1c0" auto="0" top-xid="4"/>
+<history version="2" edit-time="74" last-saved="1309402318" uid="ef31f266-a0b2-11e0-8fcf-bf1478bfc1c0">
+<version id="1" started="1309175189" uid="188a5284-a0b3-11e0-8fcf-bf1478bfc1c0" auto="0" top-xid="4"/>
+<version id="2" started="1309402318" uid="ec06766c-a2c3-11e0-9dff-e0c9b524135f" auto="0" top-xid="4"/>
 </history>
 <revisions show="1" mark="1" show-level="0" auto="0">
 <r id="1" time-started="1309175123" version="0" author="Ben Martin" >1</r>
@@ -24,12 +25,12 @@
 <r id="3" time-started="1309175176" version="0" author="Ben Martin" >3</r>
 </revisions>
 <styles>
-<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
 </styles>
 <pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
 <section xid="3" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
-<p baz="u2" delta:move-id="mv1" style="Normal" ct:split-id="split0" revision="1{}{abi-para-end-deleted-revision:3}" xid="4"><c revision="1">In revision 2 a new paragraph is inserted after this one. It is then deleted in revision 3.</c></p>
-<p ct:split-id-ref="split0" ct:split-id="0" revision="1{}{abi-para-start-deleted-revision:3},-3" style="Normal" xid="2"><c revision="2,-3">Inserted in r2.</c></p>
-<p ct:split-id-ref="split0" ct:split-id="0" revision="1" style="Normal" xid="1"><c revision="1">This is the last para.</c></p>
+<p style="Normal" ct:split-id="split0" xid="4"><c revision="1">In revision 2 a new paragraph is inserted after this one. It is then deleted in revision 3.</c><c revision="1"></c></p>
+<p baz="u2" delta:move-id="mv1" ct:split-id-ref="split0" ct:split-id="0" revision="1{}{abi-para-deleted-revision:3},-3" style="Normal" xid="2"><c revision="2,-3">Inserted in r2.</c><c revision="2"></c></p>
+<p ct:split-id-ref="split0" ct:split-id="0" revision="1" style="Normal" xid="1"><c revision="1">This is the last para.</c><c revision="1"></c></p>
 </section>
 </abiword>

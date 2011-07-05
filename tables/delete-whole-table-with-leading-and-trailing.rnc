@@ -50,17 +50,26 @@ sectioncore =
       attribute * {text}*,
 
       element text:p {
-         text, 
-         # "This is the first paragra",
-         ( attribute text:* { text } )*,
-         attribute split:split01 {"split0"},
+         "A deletion is done starting mid way through para2 and extending beyond the table into a paragraph on the other side.",
+         ( attribute  text:* { text } )*,
+         ( attribute split:* {text } )*,
          attribute delta:insertion-type {"insert-with-content"}, 
+         attribute delta:insertion-change-idref{"1"}
+      },
+
+      element text:p {
+         text, 
+         # "This is ",
+         ( attribute  text:* { text } )*,
+         ( attribute split:* {text } )*,
+         attribute delta:split-id { text }?,
+         attribute delta:insertion-type { text }, 
          attribute delta:insertion-change-idref{"1"},
          
          element delta:merge {
             attribute delta:removal-change-idref {"2"}, 
             element delta:leading-partial-content {
-               "ph"
+               "para2."
             },
 
             element delta:intermediate-content {
@@ -76,6 +85,7 @@ sectioncore =
                      element table:table-column { text },
                      element table:table-column { text },
                      element table:table-row {
+
                         element table:table-cell {
                            attribute table:style-name { text },
                            element delta:removed-content {
@@ -86,7 +96,7 @@ sectioncore =
                                  attribute delta:insertion-type {"insert-with-content"}, 
                                  attribute delta:insertion-change-idref{"1"},
                                  (
-                                    "This was added with"
+                                    "Table Cell 1"
                                     | 
                                     (
                                        element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} },
@@ -124,7 +134,7 @@ sectioncore =
                                  ( attribute text:* { text } )*,
                                  attribute delta:insertion-type {"insert-with-content"}, 
                                  attribute delta:insertion-change-idref{"1"},
-                                 ( "at the end of para" | (
+                                 ( "Top Right" | (
                                     element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} },
                                     text?,
                                     element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }
@@ -151,11 +161,11 @@ sectioncore =
                                  attribute delta:removal-change-idref {"2"},
                                  element text:p { 
                                     ( attribute text:* { text } )*,
-                                 attribute delta:insertion-type {"insert-with-content"}, 
-                                    attribute delta:insertion-change-idref{"1"},
-                                    element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} },
+                                    attribute delta:insertion-type {"insert-with-content"}, 
+                                    attribute delta:insertion-change-idref{"2"},
+                                    element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} }?,
                                     text?,
-                                    element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} } 
+                                    element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }? 
                                  }
                               }
                            )
@@ -179,9 +189,9 @@ sectioncore =
                                     ( attribute text:* { text } )*,
                                     attribute delta:insertion-type {"insert-with-content"}, 
                                     attribute delta:insertion-change-idref{"1"},
-                                    element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} },
+                                    element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} }?,
                                     text?,
-                                    element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} } 
+                                    element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }? 
                                  }
                               }
                            )
@@ -204,10 +214,10 @@ sectioncore =
                                  element text:p { 
                                     ( attribute text:* { text } )*,
                                     attribute delta:insertion-type {"insert-with-content"}, 
-                                    attribute delta:insertion-change-idref{"1"},
-                                    element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} },
+                                    attribute delta:insertion-change-idref{"2"},
+                                    element delta:inserted-text-start { attribute delta:inserted-text-id {"1"} }?,
                                     text?,
-                                 element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} } 
+                                    element delta:inserted-text-end { attribute delta:inserted-text-idref {"1"} }? 
                                  }
                               }
                            )
@@ -233,7 +243,7 @@ sectioncore =
                      attribute RR {text}?,
                      attribute delta:removed-text-id {"ctid-1"},
                      attribute delta:removal-change-idref {"2"},
-                     "This is the sec"
+                     "This is after"
                   },
                   element delta:inserted-text-end {
                      attribute delta:inserted-text-idref {"1"}
@@ -258,9 +268,9 @@ sectioncore =
       }, # text:p
 
       element text:p { 
-         "This is the end, my friend.",
-         attribute delta:split-id {"split1"},
-         attribute delta:insertion-type {"split"}, 
+         "eod",
+         attribute delta:split-id {text}?,
+         attribute delta:insertion-type {text}, 
          attribute delta:insertion-change-idref{"1"},
          ( attribute text:* { text } )*
       }
