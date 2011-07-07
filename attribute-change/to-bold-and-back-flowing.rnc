@@ -73,8 +73,8 @@ sectioncore =
             attribute text:style-name {"T2"}, 
             attribute delta:insertion-change-idref {"3"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change3 {"2,insert,text:style-name,"}, 
-            attribute ac:change4 {"3,modify,text:style-name,T1"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"},
             "and"
          },
          element text:span { 

@@ -59,17 +59,17 @@ sectioncore =
             attribute text:style-name {"T1"}, 
             attribute delta:insertion-change-idref {"4"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change4 {"2,insert,text:style-name,"}, 
-            attribute ac:change5 {"3,modify,text:style-name,T2"}, 
-            attribute ac:change6 {"4,modify,text:style-name,T4"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T2"}, 
+            attribute ac:change3 {"4,modify,text:style-name,T4"},
             "text"
          },
          element text:span {
             attribute text:style-name {"T5"}, 
             attribute delta:insertion-change-idref {"6"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change3 {"5,insert,text:style-name,"}, 
-            attribute ac:change4 { text },
+            attribute ac:change1 {"5,insert,text:style-name,"}, 
+            attribute ac:change2 { text },
 #            attribute ac:change4 {"6,modify,text:style-name,T6"},
             "goes"
          },

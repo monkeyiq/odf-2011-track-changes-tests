@@ -65,43 +65,43 @@ sectioncore =
             attribute text:style-name {"T1"}, 
             attribute delta:insertion-change-idref {"5"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change4 {"2,insert,text:style-name,"}, 
-            attribute ac:change5 {"3,modify,text:style-name,T1"}, 
-            attribute ac:change6 {"5,modify,text:style-name,T3"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"}, 
+            attribute ac:change3 {"5,modify,text:style-name,T3"},
             "here"
          },
          element text:span {
             attribute text:style-name {"T3"}, 
             attribute delta:insertion-change-idref {"3"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change3 {"2,insert,text:style-name,"}, 
-            attribute ac:change4 {"3,modify,text:style-name,T1"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"},
             ", "
          },
          element text:span {
             attribute text:style-name {"T5"}, 
             attribute delta:insertion-change-idref {"4"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change4 {"2,insert,text:style-name,"}, 
-            attribute ac:change5 {"3,modify,text:style-name,T1"}, 
-            attribute ac:change6 {"4,modify,text:style-name,T3"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"}, 
+            attribute ac:change3 {"4,modify,text:style-name,T3"},
             "it"
          },
          element text:span {
             attribute text:style-name {"T3"}, 
             attribute delta:insertion-change-idref {"3"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change3 {"2,insert,text:style-name,"}, 
-            attribute ac:change4 {"3,modify,text:style-name,T1"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"},
             " "
          },
          element text:span {
             attribute text:style-name {"T1"}, 
             attribute delta:insertion-change-idref {"5"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change4 {"2,insert,text:style-name,"}, 
-            attribute ac:change5 {"3,modify,text:style-name,T1"}, 
-            attribute ac:change6 {"5,modify,text:style-name,T3"},
+            attribute ac:change1 {"2,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"}, 
+            attribute ac:change3 {"5,modify,text:style-name,T3"},
             "was "
          },
          element text:span {

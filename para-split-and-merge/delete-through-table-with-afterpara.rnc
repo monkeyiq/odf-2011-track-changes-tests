@@ -91,7 +91,7 @@ sectioncore =
                      attribute delta:inserted-text-id {"1"}
                   },
                   element delta:removed-content {
-                     attribute RR {"2"},
+                     attribute RR {"2"}?,
                      attribute delta:removed-text-id {"ctid-1"},
                      attribute delta:removal-change-idref {"2"},
                      "This is the para"

@@ -76,8 +76,8 @@ sectioncore =
             attribute text:style-name {"T2"}, 
             attribute delta:insertion-change-idref {"2"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change3 {"1,insert,text:style-name,"}, 
-            attribute ac:change4 {"2,modify,text:style-name,T1"},
+            attribute ac:change1 {"1,insert,text:style-name,"}, 
+            attribute ac:change2 {"2,modify,text:style-name,T1"},
             "decoration"
          },
          element text:span {
@@ -90,8 +90,8 @@ sectioncore =
             attribute text:style-name {xsd:token { pattern="T(3|4)" }},
             attribute delta:insertion-change-idref {"3"}, 
             attribute delta:insertion-type {"insert-around-content"}, 
-            attribute ac:change3 {"1,insert,text:style-name,"}, 
-            attribute ac:change4 {"3,modify,text:style-name,T1"},
+            attribute ac:change1 {"1,insert,text:style-name,"}, 
+            attribute ac:change2 {"3,modify,text:style-name,T1"},
             "changed"
          },
          text
