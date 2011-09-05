@@ -82,13 +82,13 @@ sub test2 : Tests {
 
     acsend("rdf-context-show-arcs-out uri:wingb");
     acmatch("http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb\n"
-	    + "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://docs.oasis-open.org/opendocument/meta/package/odf#Element\n"
-	    + "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2002/12/cal/icaltzd#Vevent\n" 
-	    + "http://www.w3.org/2002/12/cal/icaltzd#dtend 2010-01-26T13:00:00\n"
-	    + "http://www.w3.org/2002/12/cal/icaltzd#dtstart 2010-01-26T11:00:00\n"
-	    + "http://www.w3.org/2002/12/cal/icaltzd#geo r1315195922r31762r2\n"
-	    + "http://www.w3.org/2002/12/cal/icaltzd#summary Get your 11ses with tasty cakes before they all evaporate!\n"
-	    + "http://www.w3.org/2002/12/cal/icaltzd#uid uri:wingb" );
+	    . "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://docs.oasis-open.org/opendocument/meta/package/odf#Element\n"
+	    . "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2002/12/cal/icaltzd#Vevent\n" 
+	    . "http://www.w3.org/2002/12/cal/icaltzd#dtend 2010-01-26T13:00:00\n"
+	    . "http://www.w3.org/2002/12/cal/icaltzd#dtstart 2010-01-26T11:00:00\n"
+	    . "http://www.w3.org/2002/12/cal/icaltzd#geo r1315195922r31762r2\n"
+	    . "http://www.w3.org/2002/12/cal/icaltzd#summary Get your 11ses with tasty cakes before they all evaporate!\n"
+	    . "http://www.w3.org/2002/12/cal/icaltzd#uid uri:wingb" );
 
 
     acsend("rdf-get-xmlid-range widetime");
@@ -226,12 +226,101 @@ sub test5del : Tests {
     acsend("rdf-context-contains uri:widetime http://www.w3.org/2002/12/cal/icaltzd#dtstart 2010-01-26T08:00:00");
     acmatch("\n1\nOK\n");
 
+}
+
+
+sub test6sparql : Tests {
+
+    acrun();
+    acsend("load $fn");
+
+
+    acsend('rdf-execute-sparql "select ?s ?p ?o where { ?s ?p ?o }"');
+    acmatch("\n32\n#-----------------\n");
+    acmatch("#-----------------\n"
+	    . "o=http://docs.oasis-open.org/opendocument/meta/package/odf#Element\n"
+	    . "p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n");
+
+    
+    acsend("rdf-execute-sparql \"select ?s ?p ?o where"
+	   , "{  "
+	   , "  ?s ?p ?o . "
+	   , "  filter( str(?o) = 'wingb' ) "
+	   , "}\"" );
+    acmatch("\n1\n#-----------------\n");
+    acmatch("\n#-----------------\n"
+	    . "o=wingb\n"
+	    . "p=http://docs.oasis-open.org/opendocument/meta/package/common#idref\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n" );
+
+    
+    # 8 results for this rdflink
+    acsend("rdf-execute-sparql \""
+	   , "prefix pkg:  <http://docs.oasis-open.org/opendocument/meta/package/common#> "
+	   , "select ?s ?p ?o ?rdflink "
+	   , "where {  "
+	   , "  ?s ?p ?o . "
+	   , "  ?s pkg:idref ?rdflink . "
+	   , "  filter( str(?rdflink) = 'wingb' ) "
+	   , "}\"" );
+    acmatch("\n8\n#-----------------\n");
+    acmatch("\n#-----------------\n"
+	    . "o=2010-01-26T13:00:00\n"
+	    . "p=http://www.w3.org/2002/12/cal/icaltzd#dtend\n" 
+	    . "rdflink=wingb\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n"
+	    . "o=2010-01-26T11:00:00\n"
+	    . "p=http://www.w3.org/2002/12/cal/icaltzd#dtstart\n"
+	    . "rdflink=wingb\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n");
+
+    # two rdflinks at the same time.
+    acsend("rdf-execute-sparql \""
+	   , "prefix pkg:  <http://docs.oasis-open.org/opendocument/meta/package/common#> "
+	   , "select ?s ?p ?o ?rdflink "
+	   , "where {  "
+	   , "  ?s ?p ?o . "
+	   , "  ?s pkg:idref ?rdflink . "
+	   , "  filter( str(?rdflink) = 'wingb' || str(?rdflink) = 'widetime' ) "
+	   , "}\"" );
+    acmatch("\n16\n#-----------------\n");
+    acmatch("\n#-----------------\n"
+	    . "o=2010-01-26T13:00:00\n"
+	    . "p=http://www.w3.org/2002/12/cal/icaltzd#dtend\n" 
+	    . "rdflink=wingb\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n" );
+    acmatch("\n#-----------------\n"
+	    . "o=widetime\n"
+	    . "p=http://docs.oasis-open.org/opendocument/meta/package/common#idref\n"
+	    . "rdflink=widetime\n"
+	    . "s=uri:widetime\n"
+	    . "#-----------------\n" );
+
+
+
+
+# rdf-execute-sparql "
+# prefix pkg:  <http://docs.oasis-open.org/opendocument/meta/package/common#> 
+# select ?s ?p ?o ?rdflink 
+# where {  
+#   ?s ?p ?o . 
+#   ?s pkg:idref ?rdflink . 
+#   filter( str(?rdflink) = 'wingb' || str(?rdflink) = 'widetime' ) 
+# }
+# "
+
 
 }
 
     # TODO
     #
-    # execute query
+    # more complex sparql queries?
     # ins / del xmlid
     # rdf-import  rdf-export  
     #

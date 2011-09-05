@@ -51,14 +51,18 @@ sub acsend($) {
     return $exp->error == undef;
 }
 
+
 sub acget($) {
     return $res;
 }
 
 sub acmatch($) {
+#    my $rex = join("",@_);
     my $rex = shift;
     my $msg = shift;
 
+    print "ffffffffffffffffff\n";
+    print("rex:$rex\n");
     ok( $res =~ "$rex", 
 	"AbiCommand result match rex:$rex lastcmd:$lastcmd" );
     $res =~ "$rex" or diag("rex:$rex got:$res\ndebug message:$msg");
