@@ -302,6 +302,52 @@ sub test6sparql : Tests {
 	    . "s=uri:widetime\n"
 	    . "#-----------------\n" );
 
+
+    acsend("rdf-execute-sparql \""
+	   , "prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+	   , "prefix fqoaf: <http://xmlns.com/foaf/0.1/>   "
+	   , "prefix pkg:   <http://docs.oasis-open.org/opendocument/meta/package/common#>  "
+	   , "prefix geo84: <http://www.w3.org/2003/01/geo/wgs84_pos#> "
+ 	   , ""
+	   , "select ?s ?p ?o ?rdflink   "
+	   , "where {   "
+	   , " ?s ?p ?o .   "
+	   , " ?s pkg:idref ?rdflink .   "
+	   , "   filter( str(?s) = 'uri:wingb' ) .  "
+	   , "   filter( str(?p) != 'http://docs.oasis-open.org/opendocument/meta/package/common#idref' ) "
+	   , "}\"" );
+    acmatch("\n7\n#-----------------\n");
+
+    acmatch("\n#-----------------\n"
+	    . "o=Get your 11ses with tasty cakes before they all evaporate!\n"
+	    . "p=http://www.w3.org/2002/12/cal/icaltzd#summary\n"
+	    . "rdflink=wingb\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n"
+	    . "o=uri:wingb\n"
+	    . "p=http://www.w3.org/2002/12/cal/icaltzd#uid\n"
+	    . "rdflink=wingb\n"
+	    . "s=uri:wingb\n"
+	    . "#-----------------\n" );
+
+
+
+
+# rdf-execute-sparql "
+# prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+# prefix fqoaf: <http://xmlns.com/foaf/0.1/>  
+# prefix pkg:   <http://docs.oasis-open.org/opendocument/meta/package/common#>  
+# prefix geo84: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
+ 
+# select ?s ?p ?o ?rdflink  
+# where {  
+#  ?s ?p ?o .  
+#  ?s pkg:idref ?rdflink .  
+#    filter( str(?s) = 'uri:wingb' ) . 
+#    filter( str(?p) != 'http://docs.oasis-open.org/opendocument/meta/package/common#idref' ) 
+# }"
+
+
 # rdf-execute-sparql "
 # prefix pkg:  <http://docs.oasis-open.org/opendocument/meta/package/common#> 
 # select ?s ?p ?o ?rdflink 
@@ -459,10 +505,7 @@ sub test9submodel : Tests {
 
 }
 
-    # TODO
-    #
-    # more complex sparql queries?
-    #
+
 
 
 
