@@ -51,6 +51,21 @@ sub getidx {
     return $getidxvar;
 }
 
+sub VerifyRelaxNGSchema {
+    my $infile = shift;
+    my $schemafile = shift;
+    my $errorMsg = shift;
+
+    my $contentFile = Extract_contentXml( $infile );
+    print "contentFile:$contentFile\n";
+    system("$jing -c $schemafile $contentFile");
+    $v = $?;
+    ok( 0 == $v,
+	"Schema check using $schemafile on $infile, return code $v, msg: $errorMsg" );
+
+    return $outpath;
+}
+
 
 sub RunConversionAndVerifyRelaxNGSchema {
     my $infile = shift;

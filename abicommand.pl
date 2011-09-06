@@ -15,6 +15,12 @@ $exp = 0;
 $res = "";
 $lastcmd = "";
 
+sub tempodtfilename($) {
+    my $idx = getidx();
+    my $outpath = "$tmpdir/outfile-$idx.odt";
+    return $outpath;
+}
+
 sub acprepdoc($) {
     my $infile = shift;
     my $outfile = basename($infile);
@@ -33,7 +39,7 @@ sub acrun($) {
       DisconnectCmd => 'q',
       Verbose => 1,
       Debug => 0,
-      Timeout => 100
+      Timeout => 5 # 100
     };
 
 }
@@ -61,8 +67,7 @@ sub acmatch($) {
     my $rex = shift;
     my $msg = shift;
 
-    print "ffffffffffffffffff\n";
-    print("rex:$rex\n");
+#    print("rex:$rex\n");
     ok( $res =~ "$rex", 
 	"AbiCommand result match rex:$rex lastcmd:$lastcmd" );
     $res =~ "$rex" or diag("rex:$rex got:$res\ndebug message:$msg");

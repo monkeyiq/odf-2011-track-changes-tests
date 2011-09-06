@@ -302,9 +302,6 @@ sub test6sparql : Tests {
 	    . "s=uri:widetime\n"
 	    . "#-----------------\n" );
 
-
-
-
 # rdf-execute-sparql "
 # prefix pkg:  <http://docs.oasis-open.org/opendocument/meta/package/common#> 
 # select ?s ?p ?o ?rdflink 
@@ -315,13 +312,51 @@ sub test6sparql : Tests {
 # }
 # "
 
+}
 
+sub test7insdelxmlid : Tests {
+
+    acrun();
+    acsend("load $fn");
+
+    acsend("rdf-get-all-xmlids");
+    acmatchline("intro,widetime,wingb,");
+
+    acsend("movept EOD");
+    acsend("selectstart");
+    acsend("inserttext \"happy monkies swinging from the trees\"");
+    acsend("rdf-xmlid-insert monkies");
+
+    acsend("rdf-get-all-xmlids");
+    acmatchline("intro,monkies,widetime,wingb,");
+
+    acsend("rdf-get-xmlid-range monkies");
+    acmatchline("1160 1198");
+
+
+    # add the xmlid "nt" and delete it again
+    acsend("selectstart");
+    acsend("inserttext newtext");
+    acsend("rdf-xmlid-insert nt");
+    acsend("rdf-get-all-xmlids");
+    acmatchline("intro,monkies,nt,widetime,wingb,");
+    acsend("rdf-xmlid-delete nt");
+    acsend("rdf-get-all-xmlids");
+    acmatchline("intro,monkies,widetime,wingb,");
+
+
+    # save and see the new xmlid for monkies
+    $tfn = tempodtfilename();
+    acsend("save $tfn");
+    
+    VerifyRelaxNGSchema("$tfn", 
+			"multi2011sep-with-monkies-xmlid-added.rnc", 
+			"Added XMLID monkies to document" );
 }
 
     # TODO
     #
     # more complex sparql queries?
-    # ins / del xmlid
     # rdf-import  rdf-export  
     #
 
