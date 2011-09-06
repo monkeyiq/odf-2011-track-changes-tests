@@ -82,14 +82,14 @@ sub test2 : Tests {
 
     acsend("rdf-context-show-arcs-out uri:wingb");
     acmatch("http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb\n"
-	    . "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://docs.oasis-open.org/opendocument/meta/package/odf#Element\n"
-	    . "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2002/12/cal/icaltzd#Vevent\n" 
-	    . "http://www.w3.org/2002/12/cal/icaltzd#dtend 2010-01-26T13:00:00\n"
-	    . "http://www.w3.org/2002/12/cal/icaltzd#dtstart 2010-01-26T11:00:00\n"
-	    . "http://www.w3.org/2002/12/cal/icaltzd#geo r1315195922r31762r2\n"
-	    . "http://www.w3.org/2002/12/cal/icaltzd#summary Get your 11ses with tasty cakes before they all evaporate!\n"
-	    . "http://www.w3.org/2002/12/cal/icaltzd#uid uri:wingb" );
-
+	   . "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://docs.oasis-open.org/opendocument/meta/package/odf#Element\n" 
+ 	    . "http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.w3.org/2002/12/cal/icaltzd#Vevent\n" 
+     	    . "http://www.w3.org/2002/12/cal/icaltzd#dtend 2010-01-26T13:00:00\n"
+     	    . "http://www.w3.org/2002/12/cal/icaltzd#dtstart 2010-01-26T11:00:00\n"
+	    . "http://www.w3.org/2002/12/cal/icaltzd#geo .*\n"
+     	    . "http://www.w3.org/2002/12/cal/icaltzd#summary Get your 11ses with tasty cakes before they all evaporate!\n"
+ 	    . "http://www.w3.org/2002/12/cal/icaltzd#uid uri:wingb" 
+	);
 
     acsend("rdf-get-xmlid-range widetime");
     acmatchline("834 1012");
@@ -400,6 +400,63 @@ sub test8rdfimportexport : Tests {
 
 
     
+}
+
+sub test9submodel : Tests {
+
+    acrun();
+    acsend("load $fn");
+    acsend("rdf-size");
+    acmatchline("32");
+    acsend("rdf-context-contains uri:subj1 http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb");
+    acmatch("\n0\nOK\n");
+
+    acsend("rdf-set-context-model-xmlid wingb");
+    acsend("rdf-mutation-create");
+    acsend("rdf-mutation-add uri:subj1 uri:pred1 literalvalue1");
+    acsend("rdf-mutation-add uri:subj2 uri:pred2 literalvalue2");
+    acsend("rdf-mutation-add uri:subj2 uri:pred3 literalvalue3");
+    acsend("rdf-mutation-add uri:subj2 uri:pred3 literalvalue4");
+    acsend("rdf-mutation-commit");
+    acsend("rdf-clear-context-model");
+
+
+    # in the main document RDF, the newly added subjects should be 
+    # linked to the wingb xmlid for us automatically.
+    acsend("rdf-size");
+    acmatchline("38");
+    acsend("rdf-context-contains uri:subj1 uri:pred1 literalvalue1");
+    acmatch("\n1\nOK\n");
+    acsend("rdf-context-contains uri:subj1 http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb");
+    acmatch("\n1\nOK\n");
+    acsend("rdf-context-contains uri:subj2 http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb");
+    acmatch("\n1\nOK\n");
+    acsend("rdf-context-contains uri:subj3 http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb");
+    acmatch("\n0\nOK\n");
+
+    #
+    # removing the last (or only) subj1 should also remove the idref for us
+    #
+    acsend("rdf-set-context-model-xmlid wingb");
+    acsend("rdf-mutation-create");
+    acsend("rdf-mutation-remove uri:subj1 uri:pred1 literalvalue1");
+    acsend("rdf-mutation-commit");
+    acsend("rdf-clear-context-model");
+    acsend("rdf-size");
+    acmatchline("36");
+    acsend("rdf-context-contains uri:subj1 uri:pred1 literalvalue1");
+    acmatch("\n0\nOK\n");
+    acsend("rdf-context-contains uri:subj1 http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb");
+    acmatch("\n0\nOK\n");
+    acsend("rdf-context-contains uri:subj2 http://docs.oasis-open.org/opendocument/meta/package/common#idref wingb");
+    acmatch("\n1\nOK\n");
+ 
+
+    # this will show all triples in the log.
+    # acsend("rdf-dump");
+    # acmatch("\nxxxxxxOK\n");
+
+
 }
 
     # TODO
