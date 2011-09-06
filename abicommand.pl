@@ -15,11 +15,24 @@ $exp = 0;
 $res = "";
 $lastcmd = "";
 
-sub tempodtfilename($) {
+sub tempxfilename() {
     my $idx = getidx();
-    my $outpath = "$tmpdir/outfile-$idx.odt";
+    my $outpath = "$tmpdir/outfile-$idx";
     return $outpath;
 }
+
+sub tempodtfilename($) {
+    my $tfn = tempxfilename();
+    my $outpath = "$tfn.odt";
+    return $outpath;
+}
+
+sub temprdffilename($) {
+    my $tfn = tempxfilename();
+    my $outpath = "$tfn.rdf";
+    return $outpath;
+}
+
 
 sub acprepdoc($) {
     my $infile = shift;

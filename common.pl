@@ -52,11 +52,10 @@ sub getidx {
 }
 
 sub VerifyRelaxNGSchema {
-    my $infile = shift;
+    my $contentFile = shift;
     my $schemafile = shift;
     my $errorMsg = shift;
 
-    my $contentFile = Extract_contentXml( $infile );
     print "contentFile:$contentFile\n";
     system("$jing -c $schemafile $contentFile");
     $v = $?;
@@ -100,6 +99,31 @@ sub TestDoubleConversionToODTWithRelaxNGSchema {
     $fn = Abiword_loadAndSave( $fn, $secondabw );
     $fn = RunConversionAndVerifyRelaxNGSchema( "$tmpdir/$secondabw", $schemafile, 
 					       "Second conversion from abw to odf ($errorMsg)" );
+}
+
+
+sub RDFXMLFile_Cat {
+    my $rdfxmlfile = shift;
+
+    local $/=undef;
+    open(FH,"../bin/rdf-cat $rdfxmlfile |");
+    $ret = <FH>;
+    chomp($ret);
+    return $ret;
+}
+
+
+sub RDFXMLFile_Count {
+    my $rdfxmlfile = shift;
+    print "rdfxmlfile:$rdfxmlfile\n";
+
+    local $/=undef;
+    open(FH,"../bin/rdf-cat $rdfxmlfile | wc -l |");
+    $ret = <FH>;
+    chomp($ret);
+    $ret =~ s/\n//g;
+    print "ret:$ret\n";
+    return $ret;
 }
 
 

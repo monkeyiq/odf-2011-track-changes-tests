@@ -349,15 +349,62 @@ sub test7insdelxmlid : Tests {
     $tfn = tempodtfilename();
     acsend("save $tfn");
     
-    VerifyRelaxNGSchema("$tfn", 
+    my $contentFile = Extract_contentXml( $tfn );
+    VerifyRelaxNGSchema("$contentFile", 
 			"multi2011sep-with-monkies-xmlid-added.rnc", 
 			"Added XMLID monkies to document" );
+}
+
+
+sub test8rdfimportexport : Tests {
+
+    acrun();
+    acsend("load $fn");
+    $tfn = temprdffilename();
+    acsend("rdf-export $tfn");
+    $c = RDFXMLFile_Count("$tfn");
+    ok( $c == 32, "RDF export test, wanted 32 got $c  RDF/XML file:$tfn");
+    $rdfxml = RDFXMLFile_Cat("$tfn");
+    like( $rdfxml,
+	  qr@<uri:widetime> <http://docs.oasis-open.org/opendocument/meta/package/common#idref> "widetime" .@,
+	  "exported RDF/XML contains expected triple" );
+    unlike( $rdfxml,
+	    qr@<uri:news1> <uri:newpred1> <.*object-value> .@,
+	    "exported RDF/XML contains expected triple" );
+
+    # RNC might not be the best choice, ordering is not important in rdf/xml etc.
+    # VerifyRelaxNGSchema("$tfn", 
+    # 			"multi2011sep-rdfxml.rnc", 
+    # 			"RDF/XML export" );
+    
+
+    # note that this contains a duplicate of an existing triple
+    # just to spice things up a little. 
+    # That duplicate should be ignored during the import.
+    acsend("rdf-import extra-triples.rdf");
+    $tfn = temprdffilename();
+    acsend("rdf-export $tfn");
+
+    #
+    # did we get what we thought we should?
+    #
+    $c = RDFXMLFile_Count("$tfn");
+    $rdfxml = RDFXMLFile_Cat("$tfn");
+    ok( $c == 33, "extra triples import test, wanted 33 got $c  RDF/XML file:$tfn");
+    like( $rdfxml,
+	  qr@<uri:widetime> <http://docs.oasis-open.org/opendocument/meta/package/common#idref> "widetime" .@,
+	  "exported RDF/XML contains expected triple" );
+    like( $rdfxml,
+	  qr@<uri:news1> <uri:newpred1> <.*object-value> .@,
+	  "exported RDF/XML contains expected triple" );
+
+
+    
 }
 
     # TODO
     #
     # more complex sparql queries?
-    # rdf-import  rdf-export  
     #
 
 

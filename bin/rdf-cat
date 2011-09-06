@@ -1,0 +1,15 @@
+#!/bin/bash
+
+TMPDIR=print-rdf-`id -u`
+rm -rf /tmp/$TMPDIR 
+TMPDIR=/tmp/$TMPDIR
+mkdir  /$TMPDIR
+
+SRCDIR=`pwd`
+cd /$TMPDIR
+
+FMT=${2:-rdfxml}
+
+rdfproc soprano parse "$1" $2
+#rdfproc soprano find - - - | sort
+rdfproc soprano serialize ntriples | sort
