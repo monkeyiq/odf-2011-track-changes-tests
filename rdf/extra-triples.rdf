@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="uri:news1">
+    <ns0:newpred1 xmlns:ns0="uri:" rdf:resource="object-value"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="uri:widetime">
+    <ns0:idref xmlns:ns0="http://docs.oasis-open.org/opendocument/meta/package/common#">widetime</ns0:idref>
+  </rdf:Description>
+</rdf:RDF>
