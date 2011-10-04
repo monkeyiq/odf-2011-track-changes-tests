@@ -52,7 +52,7 @@ sub acrun($) {
       DisconnectCmd => 'q',
       Verbose => 1,
       Debug => 0,
-      Timeout => 5 # 100
+      Timeout => 15 # 100
     };
 
 }

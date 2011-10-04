@@ -99,7 +99,6 @@ sub test3 : Tests {
 	acsend("paste");
 	# acsend("inserttext foo2");
 	acsend("save $outpath");
-	acsend("help");
     }
     else
     {
@@ -127,13 +126,13 @@ sub test3 : Tests {
     $rdfxml = RDFXMLFile_Cat("$tfn");
     ok( $c == 16, "copy and paste with RDF triples following, interprocess test, wanted 16 got $c  RDF/XML file:$tfn");
     like( $rdfxml,
-	  qr@<uri:widetime> <http://docs.oasis-open.org/opendocument/meta/package/common#idref> "widetime" .@,
-	  "exported RDF/XML contains expected triple" );
+    	  qr@<uri:widetime> <http://docs.oasis-open.org/opendocument/meta/package/common#idref> "widetime" .@,
+    	  "exported RDF/XML contains expected triple" );
 
     $contentFile = Extract_contentXml( $outpath );
     $schemafile = "cross-document-post.rnc";
     VerifyRelaxNGSchema( $contentFile, $schemafile, 
-			 "cross document copy and paste text:meta and content.xml verification" );
+    			 "cross document copy and paste text:meta and content.xml verification" );
 
 }
 
