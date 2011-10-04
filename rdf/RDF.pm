@@ -108,7 +108,7 @@ sub test2 : Tests {
     # restricted view of all the RDF 
     acsend("rdf-set-context-model-xmlid widetime");
     acsend("rdf-dump");
-    acmatch("s:uri:widetime p:http://www.w3.org/2002/12/cal/icaltzd#uid o:uri:widetime \nsize:8\n");
+    acmatch("s:uri:widetime p:http://www.w3.org/2002/12/cal/icaltzd#uid ot:2 o:uri:widetime \nsize:8\n");
 
     # This is in the whole document as the above test has told us, 
     # however, it is not the restricted RDF model for widetime
@@ -129,11 +129,11 @@ sub test2 : Tests {
     # testing model-pos
     acsend("rdf-set-context-model-pos 996");
     acsend("rdf-dump");
-    acmatch("s:uri:widetime p:http://www.w3.org/2002/12/cal/icaltzd#uid o:uri:widetime \nsize:16\n");
+    acmatch("s:uri:widetime p:http://www.w3.org/2002/12/cal/icaltzd#uid ot:2 o:uri:widetime \nsize:16\n");
 
     acsend("rdf-set-context-model-pos 940");
     acsend("rdf-dump");
-    acmatch("s:uri:widetime p:http://www.w3.org/2002/12/cal/icaltzd#uid o:uri:widetime \nsize:8\n");
+    acmatch("s:uri:widetime p:http://www.w3.org/2002/12/cal/icaltzd#uid ot:2 o:uri:widetime \nsize:8\n");
 
 
 
