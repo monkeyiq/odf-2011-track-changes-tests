@@ -59,7 +59,7 @@ sub acrun($) {
 
 sub acsend($) {
     my $cmd = join(" ",@_);
-    $exp->send( $cmd );
+    $exp->send( "$cmd" );
     $lastcmd = $cmd;
 
     ($res = $exp->before);

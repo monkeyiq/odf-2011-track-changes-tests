@@ -46,6 +46,13 @@ sub Extract_contentXml {
     return "$tmpdir/content.xml";
 }
 
+sub Extract_fromODF {
+    my $infile = shift;
+    my $fn     = shift;
+    system("unzip -q -o $infile $fn -d $tmpdir");
+    return "$tmpdir/$fn";
+}
+
 sub getidx {
     $getidxvar++;
     return $getidxvar;
