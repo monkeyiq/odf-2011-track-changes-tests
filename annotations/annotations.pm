@@ -87,7 +87,14 @@ sub annotationwithtitle : Tests {
 }
 
 
+sub dangling : Tests {
 
+    my $tmpdir = getTmpDir();
+    Abiword_loadAndSave("dangling.odt", "dangling.abw");
+    my $fn = TestDoubleConversionToODTWithRelaxNGSchema( "$tmpdir/dangling.abw", 
+							 "dangling.rnc", "" );
+    print "Last output odt file path: $fn\n";
+}
 
 
 # Leave this here
