@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="15" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-AU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Ben Martin</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="2" edit-time="159" last-saved="1324530502" uid="28c3a70c-2c47-11e1-9e9f-d4f6fc509972">
+<version id="1" started="1324522106" uid="6c3172b2-2c47-11e1-9e9f-d4f6fc509972" auto="0" top-xid="7"/>
+<version id="2" started="1324530502" uid="f8733b8a-2c5a-11e1-969a-c0cf0b73b53a" auto="0" top-xid="15"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; bgcolor:transparent; widows:2; font-style:normal; text-indent:0in; text-position:normal; margin-bottom:0pt; font-weight:normal; line-height:1.0; text-align:left; font-variant:normal; text-decoration:none; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="8.267717" height="11.692913" units="in" page-scale="1.000000"/>
+<section xid="6" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" xid="7">This is the text. And this is<c></c><ann annotation="0" xid="2"><annotate annotation-id="0" xid="3" props="annotation-date:12-22-2011; annotation-author:ben; annotation-title:title1">
+<p style="Normal" xid="4">some more text done by ben.<c></c></p>
+</annotate> some more text</ann>. And the end.</p>
+<p style="Normal" xid="8">para2.</p>
+<p style="Normal" xid="9">para3 start. Middle <ann annotation="1" xid="11"><annotate annotation-id="1" xid="12" props="annotation-date:12-22-2011; annotation-author:freddy; annotation-title:t2">
+<p style="Normal" xid="13">This is the fine stuff<br/>x</p>
+</annotate>bit is here</ann>... and the end.</p>
+</section>
+</abiword>

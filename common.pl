@@ -1,6 +1,7 @@
 use Test::More;
 use IO::All;
 use File::Basename;
+use Cwd;
 
 #
 # These are a bit of a problem as they might have to be
@@ -9,6 +10,7 @@ use File::Basename;
 #
 $jing = "java -jar /usr/local/java/jing/bin/jing.jar";
 $abiwordexe = "/tmp/abiword-install-odfct/bin/abiword";
+$loexe = "openoffice.org";
 
 #
 # These should be OK without change on any Linux box
@@ -19,6 +21,10 @@ $tmpdir = "/tmp/$uid/";
 mkdir($tmpdir);
 $getidxvar=0;
 
+
+sub getTmpDir {
+    return $tmpdir;
+}
 
 sub Abiword_loadAndSave {
     my $infile = shift;
@@ -32,6 +38,29 @@ sub Abiword_loadAndSave {
     system( $cmdline );
 
     return $outpath;
+};
+
+sub LO_loadAndSave {
+    my $infile = shift;
+    my $outfile = shift;
+    my $outpath = "$tmpdir/$outfile";
+
+    $outtype = $outfile;
+    $outtype =~ s/.*\.([^.]+)/\1/g;
+    $outfile =~ s/(.*)\.([^.]+)/\1/g;
+    $cmdline = "$loexe --headless  --convert-to $outfile $infile </dev/null >/dev/null 2>/dev/null";
+    print "$cmdline\n";
+
+    my $olddir = getcwd;
+    chdir(getTmpDir());
+    system( $cmdline );
+    chdir($olddir);
+
+    my $tmpdir = getTmpDir();
+    $inbase = basename($infile);
+    $inbase =~ s/(.*)\.([^.]+)/\1/g;
+    $ret = "$tmpdir/$inbase.$outfile";
+    return $ret;
 };
 
 sub Read_contentXml {
@@ -106,6 +135,7 @@ sub TestDoubleConversionToODTWithRelaxNGSchema {
     $fn = Abiword_loadAndSave( $fn, $secondabw );
     $fn = RunConversionAndVerifyRelaxNGSchema( "$tmpdir/$secondabw", $schemafile, 
 					       "Second conversion from abw to odf ($errorMsg)" );
+    return $fn;
 }
 
 
