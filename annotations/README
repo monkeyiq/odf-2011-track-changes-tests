@@ -1,0 +1,10 @@
+The simple1 and simple2 tests both have ranged annotations these are
+natively supported by abiword and its abw format, and should use
+annotation-end to mark the range in ODF.
+
+LibreOfficeAnnotation.odt is a point annotation made with LibreOffice
+from Fedora 16 (libreoffice-core-3.4.3.2-15.fc16.x86_64).
+
+The annotation-with-title.abw is very similar to simple1 but the test
+checks the RDF from the ODT file to see that the "title" attribute
+from the abw is preserved.
